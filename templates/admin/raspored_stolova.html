@@ -1,0 +1,48 @@
+<!-- Sofija Pavlovic 0340/2022  -->
+{% extends 'admin/template.html' %}
+{% load static %}
+
+{% block title %}Raspored stolova{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/admin/raspored.css' %}">
+{% endblock %}
+{% block scripts %}
+    <script defer src="{% static 'js/raspored.js' %}"></script>
+{% endblock %}
+{% block content %}
+<h1>Raspored stolova</h1>
+<input type="hidden" id="csrf-token" value="{{ csrf_token }}">
+<div class="modovi-rada">
+    <strong>Režim rada:</strong><br>
+    <label><input type="radio" name="rezim" value="prostor"> Menjanje prostora</label>
+    <label><input type="radio" name="rezim" value="stolovi"> Menjanje stolova</label>
+</div>
+
+<div class="floor">
+    {% for p in polja %}
+        {% if p.sto_id %}
+            <div class="table round cell"
+                 data-x="{{ p.x }}" data-y="{{ p.y }}"
+                 style="left: {{ p.x }}px; top: {{ p.y }}px;">
+                {{ p.sto_id }}
+            </div>
+        {% elif p.blokirano %}
+            <div class="blocked-cell cell"
+                 data-x="{{ p.x }}" data-y="{{ p.y }}"
+                 style="left: {{ p.x }}px; top: {{ p.y }}px;">
+            </div>
+        {% else %}
+            <div class="empty-cell cell"
+                 data-x="{{ p.x }}" data-y="{{ p.y }}"
+                 style="left: {{ p.x }}px; top: {{ p.y }}px;">
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+<button type="button" class="save-btn">Sačuvaj</button>
+
+
+{% endblock %}

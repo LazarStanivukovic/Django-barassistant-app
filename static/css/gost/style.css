@@ -1,0 +1,30 @@
+/* Aleksa Sekulic 0021/2022 */
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #3A3722;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    background-color: #EAE3D2;
+    color: #3A3722;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

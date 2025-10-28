@@ -1,0 +1,33 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% block title %}Nova Dostava{% endblock %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/menadzer/napravi_dostavu.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <h1>Napravi novu dostavu</h1>
+
+    {% if error %}
+    <p class="error-message">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" class="nova-dostava-form">
+        {% csrf_token %}
+        <label for="artikal">Artikal:</label>
+        <select name="artikal" id="artikal" required>
+            <option value="" disabled selected>-- Izaberite artikal --</option>
+            {% for artikal in artikli %}
+                <option value="{{ artikal.id }}">{{ artikal.naziv }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="kolicina">Količina:</label>
+        <input type="number" name="kolicina" id="kolicina" min="1" required>
+
+        <button type="submit">Sačuvaj</button>
+    </form>
+
+{% endblock %}

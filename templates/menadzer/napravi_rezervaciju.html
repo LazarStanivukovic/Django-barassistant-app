@@ -1,0 +1,43 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% block title %}Nova Rezervacija{% endblock %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/menadzer/napravi_rezervaciju.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+    <script src="{% static 'js/napravi_rezervaciju.js' %}"></script>
+    <h1>Napravi novu rezervaciju</h1>
+
+    <form id="rezervacijaForm" method="POST">
+        {% csrf_token %}
+
+        <label for="sto">Sto:</label>
+        <select name="sto" id="sto" required>
+            <option value="" disabled selected>-- Izaberite sto --</option>
+            {% for s in stolovi %}
+                <option value="{{ s.id }}">Sto {{ s.id }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="datum_vreme">Datum i vreme:</label>
+        <input type="datetime-local" name="datum_vreme" id="datum_vreme" required
+               min="{{ now|date:'Y-m-d\\TH:i' }}">
+
+        <p id="error_message">
+            {% if error %}
+                {{ error }}
+            {% endif %}
+        </p>
+
+        <label for="ime">Ime osobe:</label>
+        <input type="text" name="ime" id="ime" maxlength="45" required>
+
+        <button type="submit">Sačuvaj</button>
+    </form>
+
+{% endblock %}

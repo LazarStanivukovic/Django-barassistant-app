@@ -1,0 +1,52 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% block title %}Raspored{% endblock %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/menadzer/napravi_raspored.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <h1>Raspored za sledecu nedelju</h1>
+
+    <table>
+        <tr>
+            <td></td>
+            {% for day in week_dates %}
+                <td>{{ day|date:"d.m.Y." }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>08:00h<br>-<br>16:00h</td>
+            {% for day, workers in week_data_first %}
+                <td>
+                    {% for worker in workers %}
+                        {{ worker }}<br>
+                    {% endfor %}
+                    <a href="{% url 'dodaj_konobara' %}?date={{ day|date:'Y-m-d' }}&shift=1">
+                        <button type="button" class="add-worker">+</button>
+                    </a>
+                </td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>16:00h<br>-<br>00:00h</td>
+            {% for day, workers in week_data_second %}
+                <td>
+                    {% for worker in workers %}
+                        {{ worker }}<br>
+                    {% endfor %}
+                    <a href="{% url 'dodaj_konobara' %}?date={{ day|date:'Y-m-d' }}&shift=2">
+                        <button type="button" class="add-worker">+</button>
+                    </a>
+                </td>
+            {% endfor %}
+        </tr>
+    </table>
+
+    <a href="{% url 'raspored_po_smenama' %}">
+        <button type="button" class="save-schedule">Sačuvaj</button>
+    </a>
+
+{% endblock %}

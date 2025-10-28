@@ -1,0 +1,25 @@
+<!-- Aleksa Sekulic 0021/2022  -->
+
+
+{% extends 'gost/template.html' %}
+{% load static %}
+{% block title %}Karta pića{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/gost/karta_pica.css' %}">
+{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <th>Naziv</th>
+            <th>Cena</th>
+            <th>Veličina<br>serviranja</th>
+        </tr>
+        {% for artikal in artikli %}
+            <tr>
+                <td>{{ artikal.naziv }}</td>
+                <td>{{ artikal.cena }} RSD</td>
+                <td>{{ artikal.velicina_serviranja }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

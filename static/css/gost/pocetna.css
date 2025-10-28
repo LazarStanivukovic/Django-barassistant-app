@@ -1,0 +1,38 @@
+/* Aleksa Sekulic 0021/2022 */
+
+
+#naslov {
+    text-align: center;
+    font-size: 3em;
+}
+
+#naziv {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 4em;
+}
+
+#sekcija {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    gap: 32px;
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}

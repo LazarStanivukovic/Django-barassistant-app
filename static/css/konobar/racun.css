@@ -1,0 +1,151 @@
+/* Andrej Veličkov 0569/2022 */
+
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+h2{
+    margin: 0 0 20px 40px;
+}
+
+form {
+    margin: 0 0 20px 40px;
+}
+
+form p,
+.input-polje,
+.input,
+form button:not(.add-button) {
+    margin-left: 0
+}
+
+
+
+th {
+    background-color: #B8860B;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 8px 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid black;
+}
+
+td {
+    padding: 8px 10px;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid black;
+}
+
+table tr:first-child td {
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    font-size: medium;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px 0 20px 40px;
+    font-family: Arial, sans-serif;
+    table-layout: auto;
+}
+
+td select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+table td form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.input-polje {
+    margin: 10px 0 20px 40px;
+    width: 250px;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid black;
+}
+
+.input {
+    margin: 20px 0 20px 40px;
+    font-size: 1.1em;
+}
+
+table .table-button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    font-size: 0.95em;
+    font-weight: 600;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+table .table-button:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}
+
+.add-button {
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    width: 150px;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0 0 40px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.add-button:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}
+
+.close-form {
+    margin: 0;
+}
+
+#open
+{
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    width: 150px;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0 0 0;
+    transition: background 0.2s, transform 0.2s;
+}

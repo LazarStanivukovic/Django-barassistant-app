@@ -1,0 +1,43 @@
+<!-- Andrej Velickov 0569/2022 -->
+{% extends 'konobar/template.html' %}
+{% load static %}
+
+{% block title %} Stavka {% endblock %}
+{% block styles %}
+
+    <link rel="stylesheet" href="{% static 'css/konobar/stavka.css' %}">
+{% endblock %}
+{% block content %}
+<h1 id="formh1">Nova stavka</h1>
+{% if nedovoljno == "1" %}
+    <br>
+    <h2 style="color: red">Količina koju zahtevate je veća od dostupne količine ({{ dostupno }})</h2>
+{% endif %}    
+    <form method="post" class="forma">
+        {% csrf_token %}
+
+        <p>
+            <label for="artikal">Naziv artikla:</label><br>
+            <select name="nazivArtikla" id="artikal" class="form-select input-polje form-input" required>
+                <option value="" disabled selected>— izaberi artikal —</option>
+                {% for a in artikli %}
+                    <option value="{{ a.naziv }}">
+                        {{ a.naziv }}
+                    </option>
+                {% endfor %}
+            </select>
+           
+            
+        </p>
+
+        <p>
+            <label for="kolicina">Količina:</label><br>
+            <input type="number" min="1" name="kolicinaArtikla" class="input-polje form-input" required>
+        </p>
+        
+
+        <button class="add-button" type="submit">
+        Dodaj stavku
+        </button>
+    </form>
+{% endblock %}

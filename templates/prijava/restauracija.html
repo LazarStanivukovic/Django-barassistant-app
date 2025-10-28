@@ -1,0 +1,40 @@
+<!-- Aleksa Sekulic 0021/2022  -->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restauracija</title>
+    <link rel="stylesheet" href="{% static 'css/prijava/style.css' %}">
+</head>
+<body>
+
+<header>
+    BarAssistant
+</header>
+
+<main>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Restauracija lozinke</h2>
+            <form method="post">
+            {% csrf_token %}
+                <input type="text" placeholder="Unesite email adresu" name="email" required>
+                {% if msg %}
+                    {% if success %}
+                        <p class="confirmmsg">{{ msg }}</p>
+                    {% else %}
+                        <p class="errormsg">{{ msg }}</p>
+                    {% endif %}
+                {% endif %}
+                <button type="submit">Pošalji</button>
+            </form>
+            <a href="{% url 'prijava' %}" class="forgot-password">Nazad na prijavu</a>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

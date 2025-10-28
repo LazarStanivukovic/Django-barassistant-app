@@ -1,0 +1,50 @@
+/* Lazar Stanivukovic 0590/2022 */
+
+
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+form.nova-dostava-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    margin: 20px 0 20px 40px;
+}
+
+
+form.nova-dostava-form label {
+    font-weight: bold;
+}
+
+
+form.nova-dostava-form input,
+form.nova-dostava-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form.nova-dostava-form button {
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+form.nova-dostava-form button:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}

@@ -1,0 +1,42 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+
+{% block title %}Statistika{% endblock %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/menadzer/statistika.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Statistika</h1>
+<form id="statistikaForm" method="POST" action="{% url 'napravi_statistiku' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="tip_artikla"><strong>Artikli i tipovi:</strong></label><br>
+        <select id="tip_artikla" name="tip_artikla" required>
+            <option value="">-- Izaberi artikal ili tip artikla --</option>
+            <optgroup label="Artikli">
+                {% for artikal in artikli %}
+                <option value="artikal_{{ artikal.id }}">{{ artikal.naziv }}</option>
+                {% endfor %}
+            </optgroup>
+            <optgroup label="Tipovi artikala">
+                {% for tip in tipovi %}
+                <option value="tip_{{ tip.id }}">{{ tip.naziv }}</option>
+                {% endfor %}
+            </optgroup>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="vremenski_interval"><strong>Vremenski interval:</strong></label><br>
+        <select id="vremenski_interval" name="vremenski_interval" required>
+            <option value="">-- Izaberi vremenski interval --</option>
+            <option value="7">Poslednjih 7 dana</option>
+            <option value="30">Poslednjih mesec dana</option>
+            <option value="365">Poslednjih godinu dana</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn-submit">Generiši</button>
+</form>
+{% endblock %}

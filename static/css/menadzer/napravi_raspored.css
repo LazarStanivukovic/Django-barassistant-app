@@ -1,0 +1,77 @@
+/* Lazar Stanivukovic 0590/2022 */
+
+
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    text-align: center;
+    max-width: 90%;
+    margin: 20px 0 20px 40px;
+    font-family: Arial, sans-serif;
+    table-layout: auto;
+}
+
+table th,
+table td {
+    padding: 8px 8px;
+    border: 2px solid black;
+    white-space: nowrap;
+}
+
+table td {
+    text-align: center;
+}
+
+table tr:first-child td {
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    padding: 8px 12px;
+}
+
+
+table tr td:first-child {
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+}
+
+
+button.add-worker {
+    padding: 5px 10px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #B8860B;
+    color: white;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button.add-worker:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}
+
+
+button.save-schedule {
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0 20px 40px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button.save-schedule:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}

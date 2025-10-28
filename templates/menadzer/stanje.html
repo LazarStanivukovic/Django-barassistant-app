@@ -1,0 +1,38 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% block title %}Stanje{% endblock %}
+{%  load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/menadzer/stanje.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <h1>Stanje artikala</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Identifikator</th>
+                <th>Artikal</th>
+                <th>Količina na stanju</th>
+                <th>Jedinica količine</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for artikal in artikli %}
+            <tr>
+                <td>{{ artikal.id }}</td>
+                <td>{{ artikal.naziv }}</td>
+                <td>{{ artikal.kolicina_na_stanju }}</td>
+                <td>{{ artikal.velicina_serviranja }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4" style="text-align:center;">Nema artikala u bazi.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

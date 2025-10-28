@@ -1,0 +1,51 @@
+<!-- Sofija Pavlovic 0340/2022  -->
+
+{% extends 'admin/template.html' %}
+{% load static %}
+{% block title %}Pregled artikala{% endblock %}
+{% block styles %}
+     <link rel="stylesheet" href="{% static 'css/admin/pregled.css' %}">
+{% endblock %}
+{% block content %}
+    <h1>Pregled artikala</h1>
+    <table>
+            <th>ID</th>
+            <th>Naziv</th>
+            <th>Tip</th>
+            <th>Cena</th>
+
+        {% for a in artikli %}
+        <tr>
+            <td class="td1">{{ a.id }}</td>
+            <td class="td1">{{ a.naziv }}</td>
+            <td class="td1">{{ a.tip }}</td>
+            <td class="td1">{{ a.cena }}</td>
+            <td>
+            <form method="post" action="{% url 'promeni_cenu' %}">
+                {% csrf_token %}
+                <input type="hidden" name="id" value="{{ a.id }}">
+                <button type="submit" class="table-button">Promeni cenu</button>
+            </form>
+            </td>
+            <td>
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{ a.id }}">
+                    <button type="submit" class="delete-btn" onclick="return confirm('Da li ste sigurni da želite da obrišete artikal?')">
+                        <img src="{% static 'images/trash.png' %}"  id="trash" alt="Obriši" width="32" height="32">
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div>
+        <a href="{% url 'dodaj_artikal' %}">
+            <button type="button" class="add-button">
+                Dodaj novi artikal
+            </button>
+        </a>
+    </div>
+
+{% endblock %}

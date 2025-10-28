@@ -1,0 +1,85 @@
+/* Andrej Veličkov 0569/2022 */
+
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+
+
+.floor {
+    position: relative;
+    width: 650px;
+    height: 455px;
+    border-radius: 10px;
+    margin: 20px 0 30px 40px;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.08);
+    background-color: #f7f7f7;
+    background-image:
+        linear-gradient(135deg, #f0f0f0 25%, #e8e8e8 25%,
+                        #e8e8e8 50%, #f0f0f0 50%,
+                        #f0f0f0 75%, #e8e8e8 75%, #e8e8e8 100%);
+    background-size: 40px 40px;
+}
+
+.table {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #B8860B, #B8860B);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, background 0.2s;
+    transform: translate(3px, 2px);
+}
+
+.table-disabled {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #807e7c;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.table:hover {
+    background: radial-gradient(circle at 30% 30%, #A67C00, #A67C00);
+    transform: scale(1.08);
+}
+
+.blocked-cell {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-color: #4d6b57;
+    opacity: 1;
+    cursor: default;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blocked-cell:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.45);
+    border: 2px solid #2e3e33;
+}
+
+.empty-cell {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    pointer-events: auto;
+}

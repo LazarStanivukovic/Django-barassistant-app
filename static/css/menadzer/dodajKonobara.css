@@ -1,0 +1,50 @@
+/* Lazar Stanivukovic 0590/2022 */
+
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    margin: 20px 0 40px 40px;
+}
+
+table td {
+    padding: 8px 8px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+table tr td:first-child {
+    font-weight: bold;
+}
+
+
+select#worker {
+    padding: 6px;
+    font-size: 1em;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+
+button[type="submit"] {
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0 20px 40px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}
+
+
+p label {
+    margin-left: 40px;
+}

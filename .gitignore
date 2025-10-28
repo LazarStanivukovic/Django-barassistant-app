@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+*$py.class
+
+.idea/
+.vscode/
+
+Graphviz-14.0.1-win64/

@@ -1,0 +1,44 @@
+<!-- Aleksa Sekulic 0021/2022 -->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/admin/style.css' %}">
+    {% block styles %}{% endblock %}
+    {% block scripts %}{% endblock %}
+</head>
+<body>
+
+<header>
+    BarAssistant - Administrator
+</header>
+
+<div class="container">
+    <nav>
+        <div class="nav-links">
+            <a href="{% url 'admin' %}">Profil</a>
+            <a href="{% url 'zaposleni' %}">Pregled zaposlenih</a>
+            <a href="{% url 'artikli' %}">Pregled artikala</a>
+            <a href="{% url 'tipovi_artikala' %}">Pregled tipova artikala</a>
+            <a href="{% url 'raspored_stolova' %}">Pregled rasporeda stolova</a>
+            <a href="{% url 'odjava' %}">Odjavi se</a>
+        </div>
+
+        <div class="nav-logo">
+            <img src="{% static 'images/logo_official.png' %}" alt="Logo">
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</div>
+
+</body>
+</html>

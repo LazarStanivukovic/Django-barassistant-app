@@ -1,0 +1,35 @@
+/* Lazar Stanivukovic 0590/2022 */
+
+h1 {
+    margin: 20px 0 40px 40px;
+}
+
+#statistikaForm {
+    margin: 20px 0 20px 40px;
+}
+
+.form-group {
+    margin-top: 30px;
+}
+
+.form-group select {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.btn-submit {
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}

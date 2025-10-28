@@ -1,0 +1,36 @@
+/* Andrej Velickov 0569/2022 */
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+table {
+    margin-left: 40px;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+table th,
+table td {
+    padding: 8px 8px;
+    border: 2px solid black;
+    white-space: nowrap;
+}
+
+table td {
+    text-align: center;
+    font-size: xx-large;
+}
+
+table tr:first-child td {
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    font-size: medium;
+}
+
+table tr td:first-child {
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    font-size: medium;
+}

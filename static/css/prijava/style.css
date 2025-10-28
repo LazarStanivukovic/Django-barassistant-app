@@ -1,0 +1,110 @@
+/* Aleksa Sekulic 0021/2022 */
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+
+header {
+    background-color: #3A3722;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+main {
+    position: relative;
+    padding: 30px 30px 30px 30px;
+    background-image: url("../../images/pozadina.jpeg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: calc(100vh - 117px);
+}
+
+main::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid black;
+    pointer-events: none;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    background-color: #F3EFE3;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 30px;
+    color: #3A3722;
+    font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    margin: 12px auto;
+    display: block;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #3A3722;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.errormsg {
+    color: red;
+}
+
+.confirmmsg {
+    color: green;
+}

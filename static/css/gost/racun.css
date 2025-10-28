@@ -1,0 +1,43 @@
+/* Aleksa Sekulic 0021/2022 */
+
+
+#konobar {
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#sekcija {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 30px;
+    font-size: 1.5em;
+    width: fit-content;
+    min-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#iznos {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}

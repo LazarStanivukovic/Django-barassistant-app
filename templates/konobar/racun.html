@@ -1,0 +1,83 @@
+<!-- Andrej Velickov 0569/2022 -->
+{% extends 'konobar/template.html' %}
+{% load static %}
+
+{% block title %} Račun {% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/konobar/racun.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Pregled računa</h1>
+    {% if otvoren == 1 %}
+    <h2>Konobar: {{ konobar }}</h2>
+    <h2>Broj stola: {{ sto }}</h2>
+    {% endif %}
+    
+ 
+    {% if otvoren == 0 %}
+        <br>
+        <h2>Dati sto trenutno nema otvoren račun.</h2>
+        <br>
+        <form method="post" style="display:inline;">
+        {% csrf_token %}
+        <a href="{% url 'racun' sto %}">
+            <button type="submit" class="add-button" name="action" value="open" id="open">
+                Otvori račun
+            </button>
+        </a>
+        </form>
+    {% elif otvoren == 1 %}
+        <table>
+            <th>Artikal</th>
+            <th>Količina</th>
+            <th>Jedinična cena</th>
+            <th>Cena</th>
+        {% if not stavke|length == 0 %}
+        {% for s in stavke %}
+        <tr>
+            <td class="td1">{{ s.naziv }}</td>
+            <td class="td1">{{ s.kolicina }}</td>
+            <td class="td1">{{ s.jcena }}</td>
+            <td class="td1">{{ s.cena }}</td>
+            <td>
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{ s.id }}">
+                
+                    {% if s.preostala_kolicina == 0 %}
+                        <button class="table-button" type="submit" name="action" value="inc" disabled>+</button>
+                    {% else %}
+                        <button class="table-button" type="submit" name="action" value="inc">+</button>
+                    {% endif %}
+                
+                    {% if s.kolicina == 0 %}
+                        <button class="table-button" type="submit" name="action" value="dec" disabled>-</button>
+                    {% else %}
+                        <button class="table-button" type="submit" name="action" value="dec">-</button>
+                    {% endif %}
+
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}    
+        </table>
+        <div>
+        <a href="{% url 'stavka' sto %}">
+            <button type="button" class="add-button">
+                Nova stavka
+            </button>
+        </a>
+        </div>
+        <div>
+        <form method="post" class="close-form">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{ sto }}">
+            <button type="submit" name="action" value="close" class="add-button">
+                Zatvori račun
+            </button>
+        </form>
+        </div>
+        
+    {% endif %}
+{% endblock %}

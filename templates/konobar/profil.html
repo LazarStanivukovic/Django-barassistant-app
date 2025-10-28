@@ -1,0 +1,38 @@
+<!-- Andrej Velickov 0569/2022 -->
+{% extends 'konobar/template.html' %}
+{% load static %}
+
+{% block title %} Profil {% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/konobar/profil.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Dobrodošli, {{ request.user.first_name }}!</h1>
+    <img  src="/static/images/profile.jpg" id="profilpic" alt="profilpic" >
+    <table class="border">
+        <tr>
+            <td><strong>Ime</strong></td>
+            <td>{{ request.user.first_name }}</td>
+        </tr>
+        <tr>
+            <td><strong>Prezime</strong></td>
+            <td>{{ request.user.last_name }}</td>
+        </tr>
+        <tr>
+            <td><strong>Email</strong></td>
+            <td>{{ request.user.email }}</td>
+        </tr>
+        <tr>
+            <td><strong>Korisničko ime</strong></td>
+            <td>{{ request.user.username }}</td>
+        </tr>
+        <tr>
+            <td><strong>Broj recenzija</strong></td>
+            <td>{{ brojOcena }}</td>
+        </tr>
+        <tr>
+            <td><strong>Prosečna ocena</strong></td>
+            <td>{{ prosecnaOcena }}</td>
+        </tr>
+    </table>
+{% endblock %}

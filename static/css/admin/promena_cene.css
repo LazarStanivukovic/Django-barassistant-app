@@ -1,0 +1,76 @@
+/* Sofija Pavlovic 0340/2022 */
+
+h1 {
+    margin-left: 40px;
+    margin-top: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+table.border {
+    border-collapse: collapse;
+    table-layout: auto;
+    width: auto;
+    max-width: none;
+    margin: 20px 0 0 40px;
+}
+
+table.border td {
+    padding: 8px 6px;
+    border: 2px solid black;
+    font-size: 1.05em;
+}
+
+.forma-promena {
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.forma-promena label {
+    font-size: 1.05em;
+    font-weight: normal;
+    color: #000;
+}
+
+.forma-promena input[type="number"] {
+    display: block;
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.forma-promena input[type="number"]:focus {
+    outline: none;
+    border-color: #B8860B;
+    box-shadow: 0 0 3px rgba(0, 0, 163, 0.3);
+}
+
+.forma-promena .add-button {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 0.95em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.forma-promena .add-button:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}
+
+.forma-promena span {
+    color: red;
+    font-size: 0.95em;
+}

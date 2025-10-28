@@ -1,0 +1,43 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/menadzer/style.css' %}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+
+<header>
+    BarAssistant - Menadžer
+</header>
+
+<div class="container">
+    <nav >
+        <div class="nav-links">
+        <a href="{% url 'menadzer' %}">Profil</a>
+        <a href="{% url 'dostave' %}">Pregled dostava</a>
+        <a href="{% url 'rezervacije' %}">Pregled rezervacija</a>
+        <a href="{% url 'raspored_po_smenama' %}">Pregled rasporeda po smenama</a>
+        <a href="{% url 'stanje_artikala' %}">Pregled stanja artikala</a>
+        <a href="{% url 'statistika' %}">Pregled statistike</a>
+        <a href="{% url 'qr_kod' %}">Generisanje QR koda</a>
+        <a href="{% url 'odjava' %}">Odjavi se</a>
+        </div>
+
+        <div class="nav-logo">
+            <img src="{% static 'images/logo_official.png' %}" alt="Logo">
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</div>
+
+</body>
+</html>

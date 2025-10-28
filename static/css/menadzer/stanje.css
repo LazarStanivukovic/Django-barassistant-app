@@ -1,0 +1,31 @@
+/* Lazar Stanivukovic 0590/2022 */
+
+
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    text-align: center;
+    max-width: 90%;
+    margin: 20px 0 20px 40px;
+    font-family: Arial, sans-serif;
+    table-layout: auto;
+}
+
+table th,
+table td {
+    padding: 8px 10px;
+    border: 2px solid black;
+    white-space: nowrap;
+}
+
+
+table thead tr {
+    background-color: #B8860B;
+    color: white;
+    font-weight: bold;
+}

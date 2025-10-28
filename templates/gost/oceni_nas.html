@@ -1,0 +1,30 @@
+<!-- Aleksa Sekulic 0021/2022  -->
+
+
+{% extends 'gost/template.html' %}
+{% load static %}
+{% block title %}Oceni nas{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/gost/oceni_nas.css' %}">
+{% endblock %}
+{% block scripts %}
+    <script defer src="{% static 'js/oceni_nas.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="rating-container">
+        <div class="rating-title">Ocenite zadovoljstvo uslugom:</div>
+        <form method="post">
+            {% csrf_token %}
+            <div id="stars">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+            <input type="hidden" name="ocena" id="ocena">
+            <button type="submit" class="confirm-btn" disabled>Potvrdi</button>
+        </form>
+    </div>
+{% endblock %}

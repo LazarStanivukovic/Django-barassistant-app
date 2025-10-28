@@ -1,0 +1,60 @@
+/* Lazar Stanivukovic 0590/2022 */
+
+
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    text-align: center;
+    max-width: 90%;
+    margin: 20px 0 20px 40px;
+    font-family: Arial, sans-serif;
+    table-layout: auto;
+}
+
+table th,
+table td {
+    padding: 8px 10px;
+    border: 2px solid black;
+    white-space: nowrap;
+}
+
+
+table thead tr {
+    background-color: #B8860B;
+    color: white;
+    font-weight: bold;
+}
+
+
+table select {
+    padding: 8px 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+button.nova-rezervacija {
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0 20px 40px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button.nova-rezervacija:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}

@@ -1,0 +1,42 @@
+<!-- Sofija Pavlovic 0340/2022  -->
+
+{% extends 'admin/template.html' %}
+{% load static %}
+{% block title %}Dodaj artikal{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/admin/pregled.css' %}">
+{% endblock %}
+{% block content %}
+    <h1 id="formh1">Dodaj artikal</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <p>
+            {{ form.naziv.label_tag }}<br>
+            {{ form.naziv }}
+            {% if form.naziv.errors %}
+                <span style="color:red;">{{ form.naziv.errors.0 }}</span>
+            {% endif %}
+        </p>
+
+        <p>
+            {{ form.cena.label_tag }}<br>
+            {{ form.cena }}
+            {% if form.cena.errors %}
+                <span style="color:red;">{{ form.cena.errors.0 }}</span>
+            {% endif %}
+        </p>
+        <p>
+            {{ form.tip.label_tag }}<br>
+            {{ form.tip }}
+            {% if form.tip.errors %}
+                <span style="color:red;">{{ form.tip.errors.0 }}</span>
+            {% endif %}
+        </p>
+        <br>
+        <button class="add-button" type="submit">
+        Sačuvaj
+        </button>
+    </form>
+
+{% endblock %}

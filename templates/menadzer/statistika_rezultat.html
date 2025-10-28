@@ -1,0 +1,41 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% block title %}Rezultati statistike{% endblock %}
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/menadzer/statistika_rezultat.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Statistika{% if tip %} za tip "{{ tip }}"{% endif %} (poslednjih {{ interval }} dana)</h1>
+
+
+<table>
+    <tr>
+        <th>Artikal</th>
+        <th>Ukupan prihod (RSD)</th>
+    </tr>
+    {% for artikal, prihod in statistika.items %}
+    <tr>
+        <td>{{ artikal }}</td>
+        <td>{{ prihod }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="2">Nema podataka za izabrani period.</td>
+    </tr>
+    {% endfor %}
+
+    {% if prikaz_ukupno and ukupno %}
+    <tr>
+        <td colspan="2" id="ukupno"><strong>Ukupno: {{ ukupno }}</strong></td>
+    </tr>
+    {% endif %}
+</table>
+
+
+<a href="{% url 'statistika' %}">
+    <button type="button" class="nazad">Nazad</button>
+</a>
+{% endblock %}

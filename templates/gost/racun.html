@@ -1,0 +1,47 @@
+<!-- Aleksa Sekulic 0021/2022  -->
+
+
+{% extends 'gost/template.html' %}
+{% load static %}
+{% block title %}Račun{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/gost/karta_pica.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gost/racun.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="konobar">
+    {% if konobar %}
+        Konobar: {{ konobar.user.first_name }} {{ konobar.user.last_name }}
+    {% else %}
+        Slobodan sto
+    {% endif %}
+    </div>
+
+    {% if stavke %}
+        <table>
+            <tr>
+                <th>Naziv</th>
+                <th>Količina</th>
+                <th>Jedinična<br>cena</th>
+                <th>Cena</th>
+            </tr>
+            {% for stavka in stavke %}
+                <tr>
+                    <td>{{ stavka.artikal.naziv }}</td>
+                    <td>{{ stavka.kolicina }}</td>
+                    <td>{{ stavka.artikal.cena }} RSD</td>
+                    <td>{{ stavka.cena }} RSD</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <div id="sekcija">
+            <div id="iznos">
+                Ukupno: {{ ukupno }} RSD
+            </div>
+            <a href="{% url 'oceni_nas' %}">
+                <button>Oceni nas!</button>
+            </a>
+        </div>
+    {% endif %}
+{% endblock %}

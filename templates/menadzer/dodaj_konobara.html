@@ -1,0 +1,58 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% load static %}
+{% block title %}Dodaj konobara{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/menadzer/dodajKonobara.css' %}">
+{% endblock %}
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <table >
+            <tr >
+                <td >Datum</td>
+                <td >
+                    {{ date|date:"d.m.Y." }}
+                </td>
+            </tr>
+
+            <tr >
+                <td >Smena</td>
+                <td >
+                    {% if shift == "1" %}
+                        08:00h - 16:00h
+                    {% elif shift == "2" %}
+                        16:00h - 00:00h
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td >Upošljeni<br>konobari</td>
+                <td >
+                    {% for worker in assigned_konobari %}
+                        {{ worker }}<br>
+                    {% empty %}
+                        Nema konobara u ovoj smeni
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+        <p>
+            <label for="worker"><strong>Dodaj konobara:</strong></label><br>
+            <select name="worker" id="worker" required >
+                <option value="" disabled selected>Odaberite konobara</option>
+                {% for worker in available_konobari %}
+                    <option value="{{ worker.id }}">{{ worker }}</option>
+                {% empty %}
+                    <option disabled>Nema dostupnih konobara</option>
+                {% endfor %}
+            </select>
+        </p>
+
+        <button type="submit" >
+            Sačuvaj
+        </button>
+    </form>
+
+{% endblock %}

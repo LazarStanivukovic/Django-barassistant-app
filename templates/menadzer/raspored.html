@@ -1,0 +1,47 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% block title %}Raspored{% endblock %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/menadzer/raspored.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <h1>Raspored za trenutnu nedelju</h1>
+
+    <table>
+        <tr>
+            <td></td>
+            {% for day in week_dates %}
+                <td>{{ day|date:"d.m.Y." }}</td>
+            {% endfor %}
+        </tr>
+
+        <tr>
+            <td>08:00h<br>-<br>16:00h</td>
+            {% for workers in firstShift %}
+                <td>
+                    {% for worker in workers %}
+                        {{ worker }}<br>
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>16:00h<br>-<br>00:00h</td>
+            {% for workers in secondShift %}
+                <td>
+                    {% for worker in workers %}
+                        {{ worker }}<br>
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+    </table>
+
+    <a href="{% url 'dodaj_raspored_po_smenama' %}">
+        <button type="button" class="novi-raspored">Napravi novi raspored</button>
+    </a>
+
+{% endblock %}

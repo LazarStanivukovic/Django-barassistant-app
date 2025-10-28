@@ -1,0 +1,21 @@
+<!-- Aleksa Sekulic 0021/2022  -->
+
+
+{% extends 'gost/template.html' %}
+{% load static %}
+{% block title %}Početna{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/gost/pocetna.css' %}">
+{% endblock %}
+{% block content %}
+    <div id="naslov">Dobrodošli u</div>
+    <div id="naziv">{{ ime }}</div>
+    <div id="sekcija">
+        <a href="{% url 'karta_pica' %}">
+            <button>Pregled karte pića</button>
+        </a>
+        <a href="{% url 'racun_gost' id %}">
+            <button {% if not id %}disabled{% endif %}>Pregled računa</button>
+        </a>
+    </div>
+{% endblock %}

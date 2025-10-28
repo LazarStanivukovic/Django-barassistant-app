@@ -1,0 +1,31 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% load static %}
+
+{% block title %} Profil {% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/menadzer/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menadzer/profil.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Dobrodošli, {{ request.user.first_name }}!</h1>
+    <img  src="/static/images/profile.jpg" id="profilpic" alt="profilpic" >
+    <table class="border">
+        <tr>
+            <td><strong>Ime</strong></td>
+            <td>{{ request.user.first_name }}</td>
+        </tr>
+        <tr>
+            <td><strong>Prezime</strong></td>
+            <td>{{ request.user.last_name }}</td>
+        </tr>
+        <tr>
+            <td><strong>Email</strong></td>
+            <td>{{ request.user.email }}</td>
+        </tr>
+        <tr>
+            <td><strong>Korisničko ime</strong></td>
+            <td>{{ request.user.username }}</td>
+        </tr>
+    </table>
+{% endblock %}

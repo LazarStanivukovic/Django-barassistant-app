@@ -1,0 +1,20 @@
+<!-- Sofija Pavlovic 0340/2022  -->
+
+{% extends 'admin/template.html' %}
+{% load static %}
+{% block title %}Dodaj artikal{% endblock %}
+{% block styles %}
+     <link rel="stylesheet" href="{% static 'css/admin/pregled.css' %}">
+{% endblock %}
+{% block content %}
+    <h1>Dodaj tip artikla</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label class="input" for="naziv">Naziv:</label><br>
+        <input type="text" id="naziv" name="naziv" class="input-polje" required>
+        <br>
+        <button class="add-button" type="submit">
+            Sačuvaj
+        </button>
+    </form>
+{% endblock %}

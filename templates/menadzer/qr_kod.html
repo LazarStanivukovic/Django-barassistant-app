@@ -1,0 +1,27 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+
+{% load static %}
+{% block title %}QR kod{% endblock %}
+{% block styles %}
+<link rel="stylesheet"  href="{% static 'css/menadzer/qr_kod.css' %}">
+{% endblock %}
+{% block content %}
+    <h1>QR kodovi</h1>
+    <form method="post">
+    {% csrf_token %}
+        <p>
+            <label for="sto_id"><strong>Broj stola:</strong></label><br>
+            <select name="sto_id">
+                {% for sto in stolovi %}
+                    <option value="{{ sto.id }}">{{ sto.id }}</option>
+                {% endfor %}
+                <option value="-1">*</option>
+            </select>
+        </p>
+        <button type="submit">Generiši</button>
+    </form>
+    {% if qr %}
+        <img src="data:image/png;base64,{{ qr }}" alt="QR Kod" id="QR">
+    {% endif %}
+{% endblock %}

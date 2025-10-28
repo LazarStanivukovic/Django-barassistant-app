@@ -1,0 +1,96 @@
+/* Andrej Veličkov 0569/2022 */
+
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+h2{
+    margin: 0 0 20px 40px;
+}
+
+form {
+    margin: 0 0 20px 40px;
+}
+
+form p,
+.input-polje,
+.input,
+form button {
+    margin-left: 0 !important;
+}
+
+form .add-button {
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+label{
+    font-size: x-large;
+}
+
+.add-button {
+    padding: 10px 22px;
+    width: 200px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #B8860B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0 0px 40px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.add-button:hover {
+    background-color: #A67C00;
+    transform: scale(1.05);
+}
+
+.input-polje {
+    margin: 10px 0 0 40px;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid black;
+}
+
+.input {
+    margin: 20px 0 20px 40px;
+    font-size: 1.1em;
+}
+
+h1 {
+    margin: 20px 0 20px 40px;
+}
+
+form {
+    margin: 0 0 20px 40px;
+}
+
+
+form.forma {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 20px 0 20px 40px;
+}
+
+
+form.forma input[type="text"],
+form.forma input[type="number"],
+form.forma select {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 200px;;
+}
+
+.form-input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 10px 0 0 40px;
+    font-size: 1.1em;
+}

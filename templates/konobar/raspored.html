@@ -1,0 +1,45 @@
+<!-- Andrej Velickov 0569/2022 -->
+{% extends 'konobar/template.html' %}
+{% block title %}Raspored{% endblock %}
+{% load static %}
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/konobar/raspored.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <h1>Raspored za trenutnu nedelju</h1>
+
+    <table>
+        <tr>
+            <td></td>
+            {% for day in week_dates %}
+                <td>{{ day|date:"d.m.Y." }}</td>
+            {% endfor %}
+        </tr>
+
+        <tr>
+            <td>08:00h<br>-<br>16:00h</td>
+            {% for work in firstShift %}
+                <td>
+                    {%  for angazovanost in work %}
+                        {{ angazovanost }}
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+
+        <tr>
+            <td>16:00h<br>-<br>00:00h</td>
+            {% for work in secondShift %}
+                <td>
+                    {%  for angazovanost in work %}
+                        {{ angazovanost }}
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+    </table>
+
+{% endblock %}

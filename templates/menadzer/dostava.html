@@ -1,0 +1,51 @@
+<!-- Lazar Stanivukovic 0590/2022 -->
+{% extends 'menadzer/template.html' %}
+{% block title %}Dostava{% endblock %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/menadzer/dostava.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <script src="{% static 'js/dostava.js' %}"></script>
+    <h1>Aktuelne dostave:</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Artikal</th>
+                <th>Količina</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in dostave %}
+            <tr id="dostava-{{ d.id }}">
+                <td>{{ d.id }}</td>
+                <td>{{ d.artikal.naziv }}</td>
+                <td>{{ d.kolicina }}</td>
+                <td>
+                    <select onchange="updateStatus({{ d.id }}, this.value)">
+                        <option value="U TOKU" {% if d.status == 'U TOKU' %}selected{% endif %}>U TOKU</option>
+                        <option value="REALIZOVANA" {% if d.status == 'REALIZOVANA' %}selected{% endif %}>REALIZOVANA</option>
+                        <option value="OTKAZANA" {% if d.status == 'OTKAZANA' %}selected{% endif %}>OTKAZANA</option>
+                    </select>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4" style="text-align:center;">
+                    Trenutno nema aktivnih dostava.
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'dodaj_dostavu' %}">
+        <button type="button" class="napravi-dostavu">Napravi novu dostavu</button>
+    </a>
+
+{% endblock %}

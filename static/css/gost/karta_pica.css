@@ -1,0 +1,25 @@
+/* Aleksa Sekulic 0021/2022 */
+
+
+table {
+    min-width: 40%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 16px 8px;
+    vertical-align: middle;
+    border: 2px solid black;
+}
+
+th {
+    background-color: #B8860B;
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+td {
+    font-size: large;
+}

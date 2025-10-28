@@ -1,0 +1,49 @@
+<!-- Sofija Pavlovic 0340/2022  -->
+
+{% extends 'admin/template.html' %}
+{% load static %}
+{% block title %}Promeni cenu{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/admin/promena_cene.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>Promena cene artikla</h1>
+
+<table class="border">
+    <tr>
+        <td><strong>ID</strong></td>
+        <td>{{ artikal.id }}</td>
+    </tr>
+    <tr>
+        <td><strong>Naziv</strong></td>
+        <td>{{ artikal.naziv }}</td>
+    </tr>
+    <tr>
+        <td><strong>Tip</strong></td>
+        <td>{{ artikal.tip_artikla }}</td>
+    </tr>
+    <tr>
+        <td><strong>Trenutna cena</strong></td>
+        <td>{{ artikal.cena }}</td>
+    </tr>
+</table>
+
+<form method="post" class="forma-promena">
+    {% csrf_token %}
+    <input type="hidden" name="id" value="{{ artikal.id }}">
+
+    <label for="nova_cena"><strong>Nova cena:</strong></label><br>
+    <input type="number" name="nova_cena" min="0" step="1">
+    <br><br>
+
+    {% if error %}
+        <span style="color:red;">{{ error }}</span><br><br>
+    {% endif %}
+
+    <button type="submit" class="add-button">
+        Sačuvaj
+    </button>
+</form>
+
+{% endblock %}

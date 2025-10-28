@@ -1,0 +1,40 @@
+<!-- Aleksa Sekulic 0021/2022 -->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/konobar/style.css' %}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+
+<header>
+    BarAssistant - Konobar
+</header>
+
+<div class="container">
+    <nav>
+        <div class="nav-links">
+            <a href="{% url 'konobar' %}">Profil</a>
+            <a href="{% url 'smene' %}">Pregled smena</a>
+            <a href="{% url 'stolovi' %}">Pregled stolova</a>
+            <a href="{% url 'odjava' %}">Odjavi se</a>
+        </div>
+
+        <div class="nav-logo">
+            <img src="{% static 'images/logo_official.png' %}" alt="Logo">
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</div>
+
+</body>
+</html>

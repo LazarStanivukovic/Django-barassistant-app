@@ -1,0 +1,41 @@
+/* Lazar Stanivukovic 0590/2022 */
+h1{
+    margin: 20px 0 0 40px;
+}
+table.border {
+    border-collapse: collapse;
+    table-layout: auto;
+    width: auto;
+    max-width: none;
+    margin: 20px 0 0 40px;
+}
+
+table.border td {
+    padding: 8px 8px;
+    border: 2px solid black;
+    font-size: 1.1em;
+}
+
+#profilpic{
+    height: 150px;
+    width: 150px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin: 20px 0 0 40px;
+}
+
+.forma-promena {
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.forma-promena input[type="number"] {
+    padding: 8px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    box-sizing:border-box;
+}
