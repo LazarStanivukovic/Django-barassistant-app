@@ -1,0 +1,562 @@
+{
+  "id": "c6775415-12ea-436c-9c48-6a01f995b0e7",
+  "version": "2.0",
+  "name": "konobar",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "944d058d-13b4-442e-98ea-f5978f244365",
+    "name": "test_uspesan_profil",
+    "commands": [{
+      "id": "fc60cc7b-01d2-4932-926f-b64a9edfd23a",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff366188-ca05-4253-aab3-6107b0522c1d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1136x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17824b07-cfdb-496b-b4da-2dc7f0af9188",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0df2a7a4-933b-405c-bc2f-93eb300f8667",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "konobar2"
+    }, {
+      "id": "27bec500-dbb2-4c13-ad37-4989dfa99d62",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "964717f1-8b9a-4c89-bbcf-9d302c0a456e",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "597173ad-d896-41d4-b0a4-61b9cdb85745",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00bd39a2-dc87-411b-b7a9-69cc91dde87c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Dobrodošli, Jovan!')]", "xpath:innerText"]
+      ],
+      "value": "Dobrodošli, Jovan!"
+    }, {
+      "id": "0680cc2e-e221-495d-9f56-8ad117e7714a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "242807ff-fc84-468e-9952-64740db6eff9",
+    "name": "test_neuspesan_zauzetSto",
+    "commands": [{
+      "id": "04761790-5255-4dd4-8a4c-a1c399bd7dce",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/konobar/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98827fd5-fd48-498c-b504-17d722d81177",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1136x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bafd28a-1a04-4ff7-9c84-675d6e439f3b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled stolova",
+      "targets": [
+        ["linkText=Pregled stolova", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled stolova')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/konobar/stolovi/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled stolova')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5006dcf-ceff-4e04-b5db-8baa704c9b43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.table-disabled",
+      "targets": [
+        ["css=.table-disabled", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58ad2c2a-1aa6-4dd0-a370-8c2dd870f47f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Raspored stolova')]", "xpath:innerText"]
+      ],
+      "value": "Raspored stolova"
+    }, {
+      "id": "9f39d2a8-d5fa-4e15-af66-bc88a996dac4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e65525cc-3dfa-4074-a061-ecdda60ef69b",
+    "name": "test_neuspesnoDodavanjeStavke_nedovoljnaKolicina",
+    "commands": [{
+      "id": "80f0bf69-5cd8-4039-8409-eee7bdc0fcbb",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/konobar/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a0a013d-5a63-4414-9ac3-074636f868c3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1136x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8326fe6a-4101-455d-a3e5-ccb64a2fac8d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled stolova",
+      "targets": [
+        ["linkText=Pregled stolova", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled stolova')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/konobar/stolovi/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled stolova')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17368ee7-8d06-42d0-81a4-6952e6e9f0a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(58) > .table",
+      "targets": [
+        ["css=a:nth-child(58) > .table", "css:finder"],
+        ["xpath=//a[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e12c07d2-182d-40dc-948a-a44450d601ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=open",
+      "targets": [
+        ["id=open", "id"],
+        ["name=action", "name"],
+        ["css=#open", "css:finder"],
+        ["xpath=//button[@id='open']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Otvori račun')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2be278d5-76e2-4704-8757-9da55078bb22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button:nth-child(1)",
+      "targets": [
+        ["css=.add-button:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nova stavka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b66c11f4-31bb-47e9-a7bf-1dc731cf089e",
+      "comment": "",
+      "command": "click",
+      "target": "id=artikal",
+      "targets": [
+        ["id=artikal", "id"],
+        ["name=nazivArtikla", "name"],
+        ["css=#artikal", "css:finder"],
+        ["xpath=//select[@id='artikal']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4551d98c-6583-43a0-a833-a59cff99a346",
+      "comment": "",
+      "command": "select",
+      "target": "id=artikal",
+      "targets": [],
+      "value": "label=Espresso"
+    }, {
+      "id": "f7063a9b-c26a-4284-ab0f-604f1a1ce293",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(2)",
+      "targets": [
+        ["css=option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='Espresso']", "xpath:attributes"],
+        ["xpath=//select[@id='artikal']/option[2]", "xpath:idRelative"],
+        ["xpath=//option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'\n                        Espresso\n                    ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bead3ab-787a-460f-85ee-f05105f43f46",
+      "comment": "",
+      "command": "click",
+      "target": "name=kolicinaArtikla",
+      "targets": [
+        ["name=kolicinaArtikla", "name"],
+        ["css=p:nth-child(3) > .input-polje", "css:finder"],
+        ["xpath=//input[@name='kolicinaArtikla']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d4ddf76-fe6a-4ba6-93bd-998b02290bcd",
+      "comment": "",
+      "command": "type",
+      "target": "name=kolicinaArtikla",
+      "targets": [
+        ["name=kolicinaArtikla", "name"],
+        ["css=p:nth-child(3) > .input-polje", "css:finder"],
+        ["xpath=//input[@name='kolicinaArtikla']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "1000"
+    }, {
+      "id": "91eff98e-b104-4c3b-bbaf-af956d632164",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj stavku')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a261d1c3-318a-47c4-9c8d-061b19bc0289",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Količina koju zahtevate je veća od dostupne količine (50)')]", "xpath:innerText"]
+      ],
+      "value": "Količina koju zahtevate je veća od dostupne količine (50)"
+    }, {
+      "id": "0b55b653-b966-47e1-be59-e16f92fce2f0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9c884ffa-50d7-41c0-aef8-4c89c5ec77d0",
+    "name": "test_brisanjeStavkeSmanjivanjemKolicine",
+    "commands": [{
+      "id": "daee9537-3c51-4f2e-84bb-7814730f510b",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/konobar/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc46e939-0958-4d64-9175-9b80682bcb3f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1136x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "064e0552-f02e-4678-a0bc-8eb307e5ad61",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled stolova",
+      "targets": [
+        ["linkText=Pregled stolova", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled stolova')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/konobar/stolovi/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled stolova')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82b466ee-7d5c-4b3a-bf6b-8e2b506b40b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(58) > .table",
+      "targets": [
+        ["css=a:nth-child(58) > .table", "css:finder"],
+        ["xpath=//a[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9031ab5e-5394-4416-9320-ad06ec0098f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button:nth-child(1)",
+      "targets": [
+        ["css=.add-button:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nova stavka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a80d9b14-ff05-447d-94cc-cfd5558ac227",
+      "comment": "",
+      "command": "click",
+      "target": "id=artikal",
+      "targets": [
+        ["id=artikal", "id"],
+        ["name=nazivArtikla", "name"],
+        ["css=#artikal", "css:finder"],
+        ["xpath=//select[@id='artikal']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16004b44-90d5-46b2-a198-64a222ea1ee6",
+      "comment": "",
+      "command": "select",
+      "target": "id=artikal",
+      "targets": [],
+      "value": "label=Latte"
+    }, {
+      "id": "ac286717-1b89-4b67-babc-eec3f11b49ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(4)",
+      "targets": [
+        ["css=option:nth-child(4)", "css:finder"],
+        ["xpath=//option[@value='Latte']", "xpath:attributes"],
+        ["xpath=//select[@id='artikal']/option[4]", "xpath:idRelative"],
+        ["xpath=//option[4]", "xpath:position"],
+        ["xpath=//option[contains(.,'\n                        Latte\n                    ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b6908e4-ee45-4ec9-81f3-b5698b7370eb",
+      "comment": "",
+      "command": "click",
+      "target": "name=kolicinaArtikla",
+      "targets": [
+        ["name=kolicinaArtikla", "name"],
+        ["css=p:nth-child(3) > .input-polje", "css:finder"],
+        ["xpath=//input[@name='kolicinaArtikla']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6a13c1c-5bc8-4abc-91ad-7aca34781b92",
+      "comment": "",
+      "command": "type",
+      "target": "name=kolicinaArtikla",
+      "targets": [
+        ["name=kolicinaArtikla", "name"],
+        ["css=p:nth-child(3) > .input-polje", "css:finder"],
+        ["xpath=//input[@name='kolicinaArtikla']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "ff0aff7e-defe-4f27-b58d-8bfef11904be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj stavku')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93b3c6b9-bbe1-41f8-b2f3-ed3ad41b1009",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button:nth-child(1)",
+      "targets": [
+        ["css=.add-button:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Nova stavka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6610a68-0f9c-4315-adf5-c9ae66c8b4d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=artikal",
+      "targets": [
+        ["id=artikal", "id"],
+        ["name=nazivArtikla", "name"],
+        ["css=#artikal", "css:finder"],
+        ["xpath=//select[@id='artikal']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bf10470-c266-45f0-90ec-b64c27cc2e64",
+      "comment": "",
+      "command": "select",
+      "target": "id=artikal",
+      "targets": [],
+      "value": "label=Hoegarden"
+    }, {
+      "id": "1002ac47-b160-4a77-aed4-45b908c5ea5e",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(7)",
+      "targets": [
+        ["css=option:nth-child(7)", "css:finder"],
+        ["xpath=//option[@value='Hoegarden']", "xpath:attributes"],
+        ["xpath=//select[@id='artikal']/option[7]", "xpath:idRelative"],
+        ["xpath=//option[7]", "xpath:position"],
+        ["xpath=//option[contains(.,'\n                        Hoegarden\n                    ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88e3f618-6533-41b6-ad25-25f9cee2b301",
+      "comment": "",
+      "command": "click",
+      "target": "name=kolicinaArtikla",
+      "targets": [
+        ["name=kolicinaArtikla", "name"],
+        ["css=p:nth-child(3) > .input-polje", "css:finder"],
+        ["xpath=//input[@name='kolicinaArtikla']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "756a2527-3286-434d-9c33-b0069228a411",
+      "comment": "",
+      "command": "type",
+      "target": "name=kolicinaArtikla",
+      "targets": [
+        ["name=kolicinaArtikla", "name"],
+        ["css=p:nth-child(3) > .input-polje", "css:finder"],
+        ["xpath=//input[@name='kolicinaArtikla']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "181dff6e-6efb-453a-bbb7-ba51efed2452",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj stavku')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f43f7ef-0fc1-45fc-ac3f-cd4e78669395",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .table-button:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(2) .table-button:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@name='action'])[2]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'-')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "325bf584-6b3f-46fb-8086-b5b29963f5b0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.td1:nth-child(1)",
+      "targets": [
+        ["css=.td1:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Hoegarden')]", "xpath:innerText"]
+      ],
+      "value": "Hoegarden"
+    }, {
+      "id": "9f209354-80a6-4306-87ad-8ced7028d62a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ce0be610-c6a2-4370-9985-3a8d0e2f1ddd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}

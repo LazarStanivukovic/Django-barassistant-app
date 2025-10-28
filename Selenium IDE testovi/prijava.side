@@ -1,0 +1,621 @@
+{
+  "id": "0228b2e4-15f0-4ef3-84a3-29fc3cfae4ec",
+  "version": "2.0",
+  "name": "prijava",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "8aeb00d3-ee6b-4ecd-8934-c74836935cff",
+    "name": "uspesna prijava",
+    "commands": [{
+      "id": "19fbf51b-7ea3-40e9-8f19-e12a4e41e162",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8134d4b2-6494-46dd-b3b8-0ee4e01a2e1c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "552x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15fd0bca-ae46-43a7-a370-ed4a06cadf75",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59e0dec8-bafb-4077-a48e-bbc108396b66",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "sekula"
+    }, {
+      "id": "eb56996a-bdca-43f5-b107-3221322c44c2",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "bbad3c68-3c47-46df-8cd3-5f481acbdae1",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37c132e1-bc03-4ec0-94f5-743e227e8071",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Dobrodošli, Aleksa!')]", "xpath:innerText"]
+      ],
+      "value": "Dobrodošli, Aleksa!"
+    }, {
+      "id": "2e540123-6f66-4ac7-a748-d5b93399d9db",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7b717b82-7e1a-469c-9e74-e7324fe0ae35",
+    "name": "pogresna lozinka",
+    "commands": [{
+      "id": "9914c4ca-5321-41b1-aa89-20e14b2dac25",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d055671-0e76-4ef8-9a8e-e9a73070827a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "552x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "581bb9f0-9cd5-4571-8097-3861c060cc59",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fff7fa5e-066f-4ea3-a3c3-c362790553ec",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "sekula"
+    }, {
+      "id": "0d35f25e-d8af-4abc-ba9e-a68b9c5970df",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "3be393e6-357b-4a2d-b4c2-5710c0819eca",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "36b74b0b-f638-4936-a672-0ebca4ac5708",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.errormsg",
+      "targets": [
+        ["css=.errormsg", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Pogresni kredencijali')]", "xpath:innerText"]
+      ],
+      "value": "Pogresni kredencijali"
+    }, {
+      "id": "a51e13f9-f56b-488e-bc28-9d737abd3769",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ae084c3a-6898-4a6a-9aca-4be2e21aeed8",
+    "name": "pogresno korisnicko ime",
+    "commands": [{
+      "id": "8fe5ca27-58a4-476c-b90d-62449b6d7ef4",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6bb28b7-c8fe-423f-b028-6d4079df2939",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "552x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97196d99-124d-4041-8abb-7fe8fab6181c",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b46694fa-a5d4-415d-a53f-c9d8b592ea15",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "mama"
+    }, {
+      "id": "ac615195-c284-4df9-b6f8-e185c65754fa",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8e38688-a579-40ff-922a-643a5027f99d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "6a2ddc45-f352-471e-9a2e-bec3616ef3e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "83d18fe7-ca35-4c83-98a5-9f8791c75401",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.errormsg",
+      "targets": [
+        ["css=.errormsg", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Pogresni kredencijali')]", "xpath:innerText"]
+      ],
+      "value": "Pogresni kredencijali"
+    }, {
+      "id": "7954a1e2-f262-4971-9090-f4d7abaa976f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "732fccf4-fca6-4b66-b8ac-62317f3d04a9",
+    "name": "neuneta lozinka",
+    "commands": [{
+      "id": "c877e1ab-7067-4baa-94a8-a51df619cec1",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3705844f-2686-4d39-8c70-987ed4d80b74",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "552x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b09c73ca-6fb3-449c-b8c4-8648cb0c8088",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc0118c7-3ac5-49ac-bf35-ce231b8b44ab",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "sekula"
+    }, {
+      "id": "58da6013-02f0-4efb-9efd-f8db253361c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4af9f76d-ee4f-4874-be7c-14947be69705",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": "Prijava"
+    }, {
+      "id": "68921f61-2aa5-472c-b3ab-2d8b08d1bfe7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b44d7967-39dc-4abc-97dd-9b1aaf77e670",
+    "name": "neuneto korisnicko ime",
+    "commands": [{
+      "id": "a2b0ddef-464f-428d-b376-3d0d2019f09b",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64127845-4d97-416f-9f45-a5597f0ebfa2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "552x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "560350a3-3aa9-4e47-8177-4216dd6e86eb",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4df9e8f-5d9c-4da7-a759-d543c89897f2",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "68da34ea-7c76-47bb-a955-bb8f3cfecb90",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0df051a-95a3-485e-95de-08a6e853c3cc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Prijava')]", "xpath:innerText"]
+      ],
+      "value": "Prijava"
+    }, {
+      "id": "1c86aeed-3306-47ef-9c0d-f415ba2f91a7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d9ef1174-b6ec-462b-9706-eb6a6a892747",
+    "name": "pogresan email",
+    "commands": [{
+      "id": "f36ff839-34f3-458d-b310-cf43639b8f74",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9196a973-667c-4533-9f9a-7bd0cd108914",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "552x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f59d5ebd-bf13-46c5-adde-ad80a96e2243",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zaboravili ste lozinku?",
+      "targets": [
+        ["linkText=Zaboravili ste lozinku?", "linkText"],
+        ["css=.forgot-password", "css:finder"],
+        ["xpath=//a[contains(text(),'Zaboravili ste lozinku?')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/restauracija/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zaboravili ste lozinku?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4acd9bf5-0ab5-43f3-992c-dc35d93ddfd1",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc17495f-3bee-41a9-a05e-6365f6a7023e",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "aki"
+    }, {
+      "id": "23fdd69e-abd3-47b9-9cdf-acfdad9ecf03",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pošalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a605f0ca-7ab5-4659-adf6-953f0bf9a0de",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.errormsg",
+      "targets": [
+        ["css=.errormsg", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Nepostojeca email adresa')]", "xpath:innerText"]
+      ],
+      "value": "Nepostojeca email adresa"
+    }, {
+      "id": "d419af7c-690b-4025-a0ec-eff8a4e17ab6",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0a49b4b3-62e2-46de-a006-2c0f20b16237",
+    "name": "uspesna restauracija",
+    "commands": [{
+      "id": "e68eed60-1b8d-46ca-a31e-4481463eae26",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87ab4a41-cb17-4c47-8ba8-e6c9a6e8cc89",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "552x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7eb976e5-a1d2-4afe-9015-09820b42a331",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zaboravili ste lozinku?",
+      "targets": [
+        ["linkText=Zaboravili ste lozinku?", "linkText"],
+        ["css=.forgot-password", "css:finder"],
+        ["xpath=//a[contains(text(),'Zaboravili ste lozinku?')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/restauracija/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zaboravili ste lozinku?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67a97d8f-7be8-4f69-84e9-3516948e4690",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b16f627-69e7-4664-a968-6a15c3f8945f",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "m"
+    }, {
+      "id": "bb0b7747-5569-474a-bc43-6b009c34f534",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c923a725-9cf1-47d1-b3ce-6d5ed94c5722",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "sa220021d@student.etf.bg.ac.rs"
+    }, {
+      "id": "99eb4b72-616e-488f-b7a6-990a1602f210",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pošalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ab38a4a-8e0b-4ffc-8131-eb0f8a92ad88",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.confirmmsg",
+      "targets": [
+        ["css=.confirmmsg", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Lozinka poslata')]", "xpath:innerText"]
+      ],
+      "value": "Lozinka poslata"
+    }, {
+      "id": "fde692f9-6829-407d-891c-76eaf6443baf",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5cc3a54f-6c9b-47bf-a2ba-d7759a3b981e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}

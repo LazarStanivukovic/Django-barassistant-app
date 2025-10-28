@@ -1,0 +1,892 @@
+{
+  "id": "3f590ff5-5481-4f86-b3bc-9753482dd842",
+  "version": "2.0",
+  "name": "admin_IDE_testovi",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "b71bdacf-111b-4ab3-9a9f-16f411a948ae",
+    "name": "test_uspesan_profile",
+    "commands": [{
+      "id": "c5584a90-e2c1-4955-9612-065a98dab31a",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "622d3f42-6027-4c6b-a794-f2b8c1f62638",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "329d0686-16c3-4528-9d6a-9d4a82d28207",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c1d6a9e-1633-4114-8086-764f415c3894",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "admin1"
+    }, {
+      "id": "04b68b2d-12f2-4a7c-91e5-94a4fb70b66f",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "sofijaisara"
+    }, {
+      "id": "10c28595-2aef-477b-b719-6d3465d35d4a",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Prijavi se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38065e98-87de-42fa-afe5-66300c3d995d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "13ae2f4a-2ab5-40e0-bb48-0d3de3ac77ed",
+    "name": "test_uspesan_brisanje_artikla",
+    "commands": [{
+      "id": "fa2522ea-088c-4df4-8fca-a1e86e699383",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "33050dd5-509b-4d4b-a3e8-1f91dfbc2ccb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aef42a65-3e37-43ea-85e2-2420545ced22",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled artikala",
+      "targets": [
+        ["linkText=Pregled artikala", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled artikala')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/artikli/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled artikala')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf737e80-3287-4cf9-96e6-733aff58bba8",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15ddda10-5758-4c73-bf30-fd17662ea46e",
+      "comment": "",
+      "command": "click",
+      "target": "id=trash",
+      "targets": [
+        ["id=trash", "id"],
+        ["css=#trash", "css:finder"],
+        ["xpath=//img[@alt='Obriši']", "xpath:img"],
+        ["xpath=//img[@id='trash']", "xpath:attributes"],
+        ["xpath=//button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a923a0ef-4b5b-4e29-8cb8-a05ee518051f",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Da li ste sigurni da želite da obrišete artikal?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43ff9ae8-7bf6-4280-9714-4e12de728f21",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a90db61e-4056-48ab-a9b8-e2b6252d4c57",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ac2c92df-c737-4b8b-bfb9-31bebb994cd8",
+    "name": "test_neuspesan_dodaj_novi",
+    "commands": [{
+      "id": "255f6f70-d236-4085-8bd6-f7a42d0973d5",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1bdf5fc-1a99-42c7-b9a0-266a34fb7b0e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be346028-d59e-47e3-ab25-445244c0bd42",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled artikala",
+      "targets": [
+        ["linkText=Pregled artikala", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled artikala')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/artikli/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled artikala')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f84ce9bb-4a13-48e9-b711-3ebe7c3b9260",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj novi artikal')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ef76752-fcd5-4c22-a436-10f579965f27",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_cena",
+      "targets": [
+        ["id=id_cena", "id"],
+        ["name=cena", "name"],
+        ["css=#id_cena", "css:finder"],
+        ["xpath=//input[@id='id_cena']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05ab840e-a2da-4b98-9475-c7c25501d53b",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cena",
+      "targets": [
+        ["id=id_cena", "id"],
+        ["name=cena", "name"],
+        ["css=#id_cena", "css:finder"],
+        ["xpath=//input[@id='id_cena']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "200"
+    }, {
+      "id": "dac5dcaa-dd6b-43bc-b654-5a5a79cd826c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "684a9b6f-a4de-49cb-a0d6-cac474596fda",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ee272e5-7433-4dcd-9c49-06c7f49ce888",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d06cb4c1-ad55-46d8-b490-247bda689db9",
+    "name": "test_neuspesan_promeni_cenu",
+    "commands": [{
+      "id": "8d97f6f5-2459-4c90-928b-8245cf4afe68",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aec2923b-47bc-4c53-a21b-3fa9b57ac814",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88725450-8e17-416f-8de7-4958c45f278a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled artikala",
+      "targets": [
+        ["linkText=Pregled artikala", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled artikala')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/artikli/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled artikala')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee2fc09c-aa7b-4111-bcd1-d7f6e8a7a4bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .table-button",
+      "targets": [
+        ["css=tr:nth-child(2) .table-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Promeni cenu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97047ad0-6543-4702-9227-e94994a694f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4f0bb8c-3832-41ad-b804-ff16e468a319",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9c92e0fb-ac3c-4c13-84e1-8ee6f576fa6b",
+    "name": "test_uspesan_brisanje_tipa_artikla",
+    "commands": [{
+      "id": "7b9db340-385e-40ec-b0e6-daf9f60cd82d",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e7314d5-eaf9-4cb4-b10a-604d7eab4ad8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cac5a83-0d19-4f15-9aed-17f2f2ec7801",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled tipova artikala",
+      "targets": [
+        ["linkText=Pregled tipova artikala", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled tipova artikala')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/tipovi_artikala/')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled tipova artikala')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5700fb9b-165c-4063-9115-a38d817cccaf",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d499020-7d6b-40c2-97aa-9ea4204ea7fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) #trash",
+      "targets": [
+        ["css=tr:nth-child(5) #trash", "css:finder"],
+        ["xpath=(//img[@alt='Obriši'])[4]", "xpath:img"],
+        ["xpath=(//img[@id='trash'])[4]", "xpath:attributes"],
+        ["xpath=//tr[5]/td[3]/form/button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "173b89ff-a952-4dad-afed-5fd2257935ae",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Da li ste sigurni da želite da obrišete artikal?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "497632b7-e870-437e-8d25-d36cb1a19d52",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1607d41-fd69-41f8-8279-f314ac70e085",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "74ca3228-531a-49c9-9be2-d532de7bf031",
+    "name": "test_neuspesan_dodaj_novi_tip",
+    "commands": [{
+      "id": "f484a5d6-71f1-4433-af2d-f27362602141",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6c85cbc-871f-4404-96e3-2488b7635a4c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cd426f4-e95b-4687-b27b-58db71519cd6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled tipova artikala",
+      "targets": [
+        ["linkText=Pregled tipova artikala", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled tipova artikala')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/tipovi_artikala/')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled tipova artikala')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d213fd9-16a7-446f-820e-d264ab598d0e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dodaj novi tip artikla')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84a0ab7d-5018-440a-9435-0749d0c2ba49",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-button",
+      "targets": [
+        ["css=.add-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d0f8d8a-1d95-46ce-b3f9-1bc463cb2ae7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e6dd5f61-a5e8-4fc1-85f2-296d9fc5e394",
+    "name": "test_neuspesan_raspored_stolova",
+    "commands": [{
+      "id": "057ff9f8-2efc-4a6a-9484-2cc8151388db",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41b6b501-9177-4904-99df-c948ae4f43ad",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75a893cb-b0be-4d7f-b6aa-8674751c4f61",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled rasporeda stolova",
+      "targets": [
+        ["linkText=Pregled rasporeda stolova", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled rasporeda stolova')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/raspored_stolova/')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled rasporeda stolova')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bf7a4b3-54d3-4255-ac04-f3aec539ff49",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.empty-cell:nth-child(15)",
+      "targets": [
+        ["css=.empty-cell:nth-child(15)", "css:finder"],
+        ["xpath=//div[15]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5c36bc7-5211-4148-a369-44d8529bedd2",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.floor",
+      "targets": [
+        ["css=.floor", "css:finder"],
+        ["xpath=//main/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4aece0d8-01b4-464e-a8fc-205c909d5061",
+      "comment": "",
+      "command": "click",
+      "target": "css=.floor",
+      "targets": [
+        ["css=.floor", "css:finder"],
+        ["xpath=//main/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "971734cc-bf93-466d-b7e0-2168b0ecd6b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.empty-cell:nth-child(44)",
+      "targets": [
+        ["css=.empty-cell:nth-child(44)", "css:finder"],
+        ["xpath=//div[44]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afcc53bc-1f9b-4560-9923-1d3fdc506b19",
+      "comment": "",
+      "command": "click",
+      "target": "css=.table:nth-child(31)",
+      "targets": [
+        ["css=.table:nth-child(31)", "css:finder"],
+        ["xpath=//div[31]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36656462-77e2-49ce-994b-a3c184865a8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.empty-cell:nth-child(47)",
+      "targets": [
+        ["css=.empty-cell:nth-child(47)", "css:finder"],
+        ["xpath=//div[47]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bbf69a2-1aeb-4bcb-9a6e-cfd716a8d544",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a1ece91b-374a-4fb6-8aa6-f43009b915d6",
+    "name": "test_uspesan_zaposleni",
+    "commands": [{
+      "id": "ef99e6de-c06a-4306-bb43-21ab2675e7e2",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af4d5cbd-377c-4483-ae81-5753b2e1e6b5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fdb2736-658a-45f3-b1da-605bba53367e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled zaposlenih",
+      "targets": [
+        ["linkText=Pregled zaposlenih", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled zaposlenih')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/zaposleni/')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled zaposlenih')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "92f75f4c-ab9b-4717-b2c7-2d8974c35fb2",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "697fdb9d-95c3-4060-b28e-6229046d8573",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(6) #trash",
+      "targets": [
+        ["css=tr:nth-child(6) #trash", "css:finder"],
+        ["xpath=(//img[@id='trash'])[5]", "xpath:attributes"],
+        ["xpath=//tr[6]/td[8]/form/button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eaf96995-2414-450c-9d5b-84e39ac5643b",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Da li ste sigurni da želite da obrišete zaposlenog?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b0d8aaf-726d-4489-83e4-5c324e1359eb",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a31b7ab-79ae-4bb1-86e7-f10ddfb3d6ca",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e4e4553-bf11-4a8d-acda-890cf9903793",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(6) #trash",
+      "targets": [
+        ["css=tr:nth-child(6) #trash", "css:finder"],
+        ["xpath=(//img[@id='trash'])[5]", "xpath:attributes"],
+        ["xpath=//tr[6]/td[8]/form/button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af6ce2a6-aa3e-4c48-8fce-827e71732dd9",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Da li ste sigurni da želite da obrišete zaposlenog?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b78370fe-2dea-4233-b3b2-b4b1518dacdb",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a8476fc-f214-4c78-a4d4-b423b76786b4",
+      "comment": "",
+      "command": "chooseCancelOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73575b6f-1e72-4686-b253-4b269327ad5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) #trash",
+      "targets": [
+        ["css=tr:nth-child(5) #trash", "css:finder"],
+        ["xpath=(//img[@id='trash'])[4]", "xpath:attributes"],
+        ["xpath=//tr[5]/td[8]/form/button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88b2ec8b-14e2-4f8a-aa9f-a718ec7a6349",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Da li ste sigurni da želite da obrišete zaposlenog?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9219252-fee8-43ff-a8d7-314ba0653711",
+      "comment": "",
+      "command": "webdriverChooseCancelOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85721ff5-792d-4f55-b7c9-9e5269ab3cbd",
+      "comment": "",
+      "command": "chooseCancelOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9023153-63b6-43e2-9665-8dc7488bdeb8",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) #trash",
+      "targets": [
+        ["css=tr:nth-child(5) #trash", "css:finder"],
+        ["xpath=(//img[@id='trash'])[4]", "xpath:attributes"],
+        ["xpath=//tr[5]/td[8]/form/button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d496a5e-82b4-4b55-8131-8970db4cb81b",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Da li ste sigurni da želite da obrišete zaposlenog?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f2b594c-606d-4650-af50-f9224c36a8a1",
+      "comment": "",
+      "command": "webdriverChooseCancelOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ceb43ef3-251e-4bea-843e-1fce937af7ad",
+      "comment": "",
+      "command": "chooseCancelOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c90766b-59df-40b7-91c3-3e185fe4b1cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(6) #trash",
+      "targets": [
+        ["css=tr:nth-child(6) #trash", "css:finder"],
+        ["xpath=(//img[@id='trash'])[5]", "xpath:attributes"],
+        ["xpath=//tr[6]/td[8]/form/button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28b118cd-e054-4b94-b9cc-bbe0653f6a2b",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Da li ste sigurni da želite da obrišete zaposlenog?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a58abc7-b652-46ef-a01a-c1f0a39d0fdc",
+      "comment": "",
+      "command": "webdriverChooseCancelOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a27b20bc-115a-49c1-baf0-5f6f9236f698",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "53296877-8b1c-40d3-a7fd-9bb8b3e4e39c",
+    "name": "test_uspesan_obrisi_zaposlenog",
+    "commands": [{
+      "id": "b1a97fa9-a5cf-49d2-b467-0d5f4d11f751",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "187009da-c4a2-4366-b922-830fc1bc93ba",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16425725-ba24-4b94-a6d6-dd338030a391",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled zaposlenih",
+      "targets": [
+        ["linkText=Pregled zaposlenih", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled zaposlenih')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/zaposleni/')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled zaposlenih')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfa5cf52-0631-41dd-9516-a73434d9da87",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63285f5c-983a-4be2-b3e3-76ed718498b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) #trash",
+      "targets": [
+        ["css=tr:nth-child(5) #trash", "css:finder"],
+        ["xpath=(//img[@id='trash'])[4]", "xpath:attributes"],
+        ["xpath=//tr[5]/td[8]/form/button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "845279d1-3bc2-448b-a889-8b4786a5d341",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Da li ste sigurni da želite da obrišete zaposlenog?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9201e55d-548f-4280-998b-3b59bc1cf446",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20c32063-1745-4af9-8e91-70dddf7e38cb",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6c9d21c0-476e-420a-8d2f-cb4b2819f3de",
+    "name": "test_uspesan_promeni_tip_zaposlenog",
+    "commands": [{
+      "id": "28509f8f-d4a7-4364-8955-b96b911507ad",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "696a1d1c-2bc4-4793-bcf1-54149ff4f6b1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "214d8e1f-a7d8-4104-be47-23583881bd1f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled zaposlenih",
+      "targets": [
+        ["linkText=Pregled zaposlenih", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled zaposlenih')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/admin/zaposleni/')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled zaposlenih')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8b6aea3-26a1-4fd1-8c19-e38e47226714",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) select",
+      "targets": [
+        ["css=tr:nth-child(2) select", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9256805d-5a22-4a25-9f8c-5eeb35a5caa0",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) option:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='M']", "xpath:attributes"],
+        ["xpath=//option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'M')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "abed3b1f-964a-4a32-95b3-d58c0a8172b8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "29cef49f-4189-4263-9ec3-ea32bec66349",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}

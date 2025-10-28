@@ -1,0 +1,1475 @@
+{
+  "id": "508aee9d-1c8c-4d23-baa3-1a776ee52d57",
+  "version": "2.0",
+  "name": "projekatpsi",
+  "url": "http://127.0.0.1:8000",
+  "tests": [{
+    "id": "6731253c-4979-40be-99b3-9e874ad99b09",
+    "name": "uspesno dodavanje nove dostave",
+    "commands": [{
+      "id": "3cf1c7c5-9220-463e-83a8-2eabf1b23c91",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd655092-e6bf-4d1d-ae57-70efc2cd5584",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e85feb3f-7376-44d3-ab98-b0601f4366ea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled dostava",
+      "targets": [
+        ["linkText=Pregled dostava", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled dostava')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/dostave/')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled dostava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9dfaf05-584d-4f96-921f-db7a39689556",
+      "comment": "",
+      "command": "click",
+      "target": "css=.napravi-dostavu",
+      "targets": [
+        ["css=.napravi-dostavu", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novu dostavu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21ab26a3-67cd-47d2-b881-94ccbed47100",
+      "comment": "",
+      "command": "click",
+      "target": "id=artikal",
+      "targets": [
+        ["id=artikal", "id"],
+        ["name=artikal", "name"],
+        ["css=#artikal", "css:finder"],
+        ["xpath=//select[@id='artikal']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4aa331c-c7fd-42a9-b5ec-a55a1f49a52c",
+      "comment": "",
+      "command": "select",
+      "target": "id=artikal",
+      "targets": [],
+      "value": "label=Espresso"
+    }, {
+      "id": "e426c4d7-bbd8-4d27-8ce1-858306c19238",
+      "comment": "",
+      "command": "click",
+      "target": "id=kolicina",
+      "targets": [
+        ["id=kolicina", "id"],
+        ["name=kolicina", "name"],
+        ["css=#kolicina", "css:finder"],
+        ["xpath=//input[@id='kolicina']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bd8e6b9-5133-4213-9863-1ae84aef9a82",
+      "comment": "",
+      "command": "type",
+      "target": "id=kolicina",
+      "targets": [
+        ["id=kolicina", "id"],
+        ["name=kolicina", "name"],
+        ["css=#kolicina", "css:finder"],
+        ["xpath=//input[@id='kolicina']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "6"
+    }, {
+      "id": "23edd4ff-b0b0-4daf-800c-98eb19944dd4",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj dostavu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e303b485-ccdb-4f5a-9487-aadd26e33029",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Dostava",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1f8255cf-3beb-4538-bb45-6c0d4b3b5473",
+    "name": "neuspesno dodata dostava",
+    "commands": [{
+      "id": "b0fec51e-5a99-48e9-9c36-e7c61fc382d0",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0265501-83b4-4dd9-84c7-1f4ede82838a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc27dc09-e113-421d-873d-78a08f5c0c71",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled dostava",
+      "targets": [
+        ["linkText=Pregled dostava", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled dostava')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/dostave/')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled dostava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b36ba73-d053-420c-81b1-80c238d3ebbd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.napravi-dostavu",
+      "targets": [
+        ["css=.napravi-dostavu", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novu dostavu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dfc475c-9283-493c-b455-2cd75580bbde",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj dostavu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdd63ee8-5594-461c-8c35-c48ccd3cdea4",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Nova Dostava",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "689441f2-8c12-4246-a820-e77fafe16245",
+    "name": "neuspesno dodata dostava fali kolicina ili je negativna",
+    "commands": [{
+      "id": "4bf00945-d06a-4e37-b659-3bd59bbd6857",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d8b0ed0-ca65-4814-84df-3f8b1aee6827",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55ed9eae-0192-4f92-abf2-5161f2213e17",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled dostava",
+      "targets": [
+        ["linkText=Pregled dostava", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled dostava')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/dostave/')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled dostava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42d297a3-2769-4a09-823b-df9f0c873501",
+      "comment": "",
+      "command": "click",
+      "target": "css=.napravi-dostavu",
+      "targets": [
+        ["css=.napravi-dostavu", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novu dostavu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "febb6083-6350-401f-a2db-8d629d582a6d",
+      "comment": "",
+      "command": "click",
+      "target": "id=artikal",
+      "targets": [
+        ["id=artikal", "id"],
+        ["name=artikal", "name"],
+        ["css=#artikal", "css:finder"],
+        ["xpath=//select[@id='artikal']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "475d64bb-4f1e-48f4-828d-1c6b24960248",
+      "comment": "",
+      "command": "select",
+      "target": "id=artikal",
+      "targets": [],
+      "value": "label=Espresso"
+    }, {
+      "id": "3fd98893-cc40-4a59-a728-d236e886d413",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj dostavu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37b1cac4-ee69-4f60-aa1d-02728c877fb4",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Nova Dostava",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "079c76fa-b0f1-4ea7-a02a-8430f94456e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=kolicina",
+      "targets": [
+        ["id=kolicina", "id"],
+        ["name=kolicina", "name"],
+        ["css=#kolicina", "css:finder"],
+        ["xpath=//input[@id='kolicina']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39618c37-0878-43d6-b5d0-4b8462a190c9",
+      "comment": "",
+      "command": "type",
+      "target": "id=kolicina",
+      "targets": [
+        ["id=kolicina", "id"],
+        ["name=kolicina", "name"],
+        ["css=#kolicina", "css:finder"],
+        ["xpath=//input[@id='kolicina']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "-2"
+    }, {
+      "id": "48ceded7-f9fe-4bed-a2c6-9ac8c5ba4574",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj dostavu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1369dac9-fe7f-48b3-a7e4-87f25f2514a5",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Nova Dostava",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9c8503a4-795d-4a49-b56f-69007cece56f",
+    "name": "uspesno dodavanje nove rezervacije",
+    "commands": [{
+      "id": "3264e2d7-252a-4928-a48e-f68c8d58ab0f",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b57384e7-c0d7-4b8e-bba8-38db9296ef34",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f085e8cf-b188-4038-8f7b-4f31572d77f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled rezervacija",
+      "targets": [
+        ["linkText=Pregled rezervacija", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled rezervacija')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/rezervacije/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled rezervacija')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03e599f0-02be-41dd-8514-39437806a7be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nova-rezervacija",
+      "targets": [
+        ["css=.nova-rezervacija", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novu rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18ac9c44-7c72-4a27-9d45-74ce19b44461",
+      "comment": "",
+      "command": "click",
+      "target": "id=sto",
+      "targets": [
+        ["id=sto", "id"],
+        ["name=sto", "name"],
+        ["css=#sto", "css:finder"],
+        ["xpath=//select[@id='sto']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb8e7770-49c8-446f-ae83-4fc4d3fc674b",
+      "comment": "",
+      "command": "select",
+      "target": "id=sto",
+      "targets": [],
+      "value": "label=Sto 4"
+    }, {
+      "id": "8a7b21e8-33f4-4dbf-b930-5354e106e07d",
+      "comment": "",
+      "command": "click",
+      "target": "id=datum_vreme",
+      "targets": [
+        ["id=datum_vreme", "id"],
+        ["name=datum_vreme", "name"],
+        ["css=#datum_vreme", "css:finder"],
+        ["xpath=//input[@id='datum_vreme']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fa60e72-d453-4387-96d6-6459bff0f151",
+      "comment": "",
+      "command": "type",
+      "target": "id=datum_vreme",
+      "targets": [
+        ["id=datum_vreme", "id"],
+        ["name=datum_vreme", "name"],
+        ["css=#datum_vreme", "css:finder"],
+        ["xpath=//input[@id='datum_vreme']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2025-11-12T16:26"
+    }, {
+      "id": "ef298430-e8e6-49e1-8846-50bdcd47738d",
+      "comment": "",
+      "command": "click",
+      "target": "css=main:nth-child(1)",
+      "targets": [
+        ["css=main:nth-child(1)", "css:finder"],
+        ["xpath=//main/main", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc331b7c-92dc-4a89-9c05-3a8ea813e2c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=ime",
+      "targets": [
+        ["id=ime", "id"],
+        ["name=ime", "name"],
+        ["css=#ime", "css:finder"],
+        ["xpath=//input[@id='ime']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1377ea6c-ae27-41b3-80f9-c8191cc5e96c",
+      "comment": "",
+      "command": "type",
+      "target": "id=ime",
+      "targets": [
+        ["id=ime", "id"],
+        ["name=ime", "name"],
+        ["css=#ime", "css:finder"],
+        ["xpath=//input[@id='ime']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "mirko"
+    }, {
+      "id": "05c45dfd-e08d-4f61-88e6-adc358af2de0",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d82ca60-4bf0-4460-98f9-68abc3eb86d0",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Rezervacije",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ee66bd01-5f9c-48d9-b2f1-2f1ac60c1bf4",
+    "name": "neuspesno dodavanje nove rezervacije",
+    "commands": [{
+      "id": "115422a1-0755-4095-a4bf-d525ca28c437",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51ac5a0c-7cea-48cd-b93a-33ed3bf200fd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3daf0c52-d7ee-4f00-91d6-e6626dd3105d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled rezervacija",
+      "targets": [
+        ["linkText=Pregled rezervacija", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled rezervacija')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/rezervacije/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled rezervacija')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7b149d0-afa3-40c3-b502-d6022da7ffd0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nova-rezervacija",
+      "targets": [
+        ["css=.nova-rezervacija", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novu rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22727b9a-2d6b-4fb0-a561-a8fc84632189",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "968bb454-6afd-4be8-888c-4a670acb1470",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Nova Rezervacija",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b5e014f-1c3b-48e3-8532-6e099b0f8006",
+      "comment": "",
+      "command": "click",
+      "target": "id=sto",
+      "targets": [
+        ["id=sto", "id"],
+        ["name=sto", "name"],
+        ["css=#sto", "css:finder"],
+        ["xpath=//select[@id='sto']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b618e49-bfbe-4333-bdb8-9b781346f64d",
+      "comment": "",
+      "command": "select",
+      "target": "id=sto",
+      "targets": [],
+      "value": "label=Sto 3"
+    }, {
+      "id": "a7979279-9caf-4015-ac04-94758b67adfe",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0782df29-d68d-46b3-9c54-3b78c7463fc1",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Nova Rezervacija",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74cfc983-1180-4d87-bda1-7ca6ffa2cc36",
+      "comment": "",
+      "command": "click",
+      "target": "id=datum_vreme",
+      "targets": [
+        ["id=datum_vreme", "id"],
+        ["name=datum_vreme", "name"],
+        ["css=#datum_vreme", "css:finder"],
+        ["xpath=//input[@id='datum_vreme']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2bf0f92-4fe8-4fb1-b122-d5e0b006a882",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Nova Rezervacija",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1713ba2-9f74-4695-b4f7-4a6b69fd1a13",
+      "comment": "",
+      "command": "click",
+      "target": "css=main:nth-child(1)",
+      "targets": [
+        ["css=main:nth-child(1)", "css:finder"],
+        ["xpath=//main/main", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d889f40-889e-4374-8ef7-2bd5cab9150e",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2389d056-4d0d-462f-b23c-c1ef7d0637c3",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Nova Rezervacija",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6cf50c7c-73d1-4179-b3ec-be941c4b0800",
+    "name": "neuspesno dodata rezervacija -+3h",
+    "commands": [{
+      "id": "453ec5c8-8ce6-43c7-939c-ddf7f305a18b",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24193a87-5f62-4690-8277-dce9d73593d3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af5a3ee1-2875-4992-8101-c98317d261c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled rezervacija",
+      "targets": [
+        ["linkText=Pregled rezervacija", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled rezervacija')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/rezervacije/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled rezervacija')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d3b488b-a89b-4c68-bb36-5f67b7f60e03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nova-rezervacija",
+      "targets": [
+        ["css=.nova-rezervacija", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novu rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d10dc93-abf9-4e34-8af0-601f4d74dfcb",
+      "comment": "",
+      "command": "click",
+      "target": "id=sto",
+      "targets": [
+        ["id=sto", "id"],
+        ["name=sto", "name"],
+        ["css=#sto", "css:finder"],
+        ["xpath=//select[@id='sto']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d4f28a0-faae-4034-b1db-6808bdd289f8",
+      "comment": "",
+      "command": "select",
+      "target": "id=sto",
+      "targets": [],
+      "value": "label=Sto 1"
+    }, {
+      "id": "a6813658-7d66-4965-bb35-703172cf43d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=datum_vreme",
+      "targets": [
+        ["id=datum_vreme", "id"],
+        ["name=datum_vreme", "name"],
+        ["css=#datum_vreme", "css:finder"],
+        ["xpath=//input[@id='datum_vreme']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0abf056d-0188-40c4-b346-feaa51614261",
+      "comment": "",
+      "command": "type",
+      "target": "id=datum_vreme",
+      "targets": [
+        ["id=datum_vreme", "id"],
+        ["name=datum_vreme", "name"],
+        ["css=#datum_vreme", "css:finder"],
+        ["xpath=//input[@id='datum_vreme']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2025-12-25T17:04"
+    }, {
+      "id": "4212cbe8-a88e-4dbd-98ff-f5144e251ad4",
+      "comment": "",
+      "command": "click",
+      "target": "css=main:nth-child(1)",
+      "targets": [
+        ["css=main:nth-child(1)", "css:finder"],
+        ["xpath=//main/main", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0cf72f5-80ac-48f9-864d-b8e3656d3833",
+      "comment": "",
+      "command": "click",
+      "target": "id=ime",
+      "targets": [
+        ["id=ime", "id"],
+        ["name=ime", "name"],
+        ["css=#ime", "css:finder"],
+        ["xpath=//input[@id='ime']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "374d4e0b-a43a-4708-9f8e-7c5606d8b56c",
+      "comment": "",
+      "command": "type",
+      "target": "id=ime",
+      "targets": [
+        ["id=ime", "id"],
+        ["name=ime", "name"],
+        ["css=#ime", "css:finder"],
+        ["xpath=//input[@id='ime']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "proba"
+    }, {
+      "id": "10f4c348-8180-4f7b-ade9-afd60a14e6c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9327d8de-c0d3-4a17-9022-7600f3f63d51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nova-rezervacija",
+      "targets": [
+        ["css=.nova-rezervacija", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novu rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbc89a2a-19c8-4dc4-a850-5e6570ace65f",
+      "comment": "",
+      "command": "click",
+      "target": "id=sto",
+      "targets": [
+        ["id=sto", "id"],
+        ["name=sto", "name"],
+        ["css=#sto", "css:finder"],
+        ["xpath=//select[@id='sto']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38171e6f-170d-4f78-9a01-63edc4d652fa",
+      "comment": "",
+      "command": "select",
+      "target": "id=sto",
+      "targets": [],
+      "value": "label=Sto 1"
+    }, {
+      "id": "f190a7a4-c925-4fd6-be3e-1827437b9e90",
+      "comment": "",
+      "command": "click",
+      "target": "id=datum_vreme",
+      "targets": [
+        ["id=datum_vreme", "id"],
+        ["name=datum_vreme", "name"],
+        ["css=#datum_vreme", "css:finder"],
+        ["xpath=//input[@id='datum_vreme']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1835cd62-24d2-49fc-8e66-3a5b3f4099f7",
+      "comment": "",
+      "command": "type",
+      "target": "id=datum_vreme",
+      "targets": [
+        ["id=datum_vreme", "id"],
+        ["name=datum_vreme", "name"],
+        ["css=#datum_vreme", "css:finder"],
+        ["xpath=//input[@id='datum_vreme']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2025-12-25T15:05"
+    }, {
+      "id": "cc083c08-f3fb-41ce-834e-d23675ccaf74",
+      "comment": "",
+      "command": "click",
+      "target": "css=main:nth-child(1)",
+      "targets": [
+        ["css=main:nth-child(1)", "css:finder"],
+        ["xpath=//main/main", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc237642-72b9-4d07-8e99-c0c9619266fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=ime",
+      "targets": [
+        ["id=ime", "id"],
+        ["name=ime", "name"],
+        ["css=#ime", "css:finder"],
+        ["xpath=//input[@id='ime']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b419629-6cf3-499f-8aca-2f9d871c8d65",
+      "comment": "",
+      "command": "type",
+      "target": "id=ime",
+      "targets": [
+        ["id=ime", "id"],
+        ["name=ime", "name"],
+        ["css=#ime", "css:finder"],
+        ["xpath=//input[@id='ime']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "nece prodje"
+    }, {
+      "id": "5dedef8f-e3a5-4cf0-916b-c5920a892973",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj rezervaciju')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c477a8d8-a771-42ba-8d8d-666397e3ee7f",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=error_message",
+      "targets": [
+        ["id=error_message", "id"],
+        ["css=#error_message", "css:finder"],
+        ["xpath=//p[@id='error_message']", "xpath:attributes"],
+        ["xpath=//form[@id='rezervacijaForm']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Sto 1 je već rezervisan unutar 3 sata od izabranog vremena.')]", "xpath:innerText"]
+      ],
+      "value": "Sto 1 je već rezervisan unutar 3 sata od izabranog vremena."
+    }]
+  }, {
+    "id": "2de0389c-a7e2-40b0-9563-04ea4d5f3880",
+    "name": "pregled stanja artikala uspesno",
+    "commands": [{
+      "id": "62a7c0d9-0a2f-46a7-83e3-b88b1b2ef235",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9a0e86a-4c37-48fd-b990-afade2c4d3b0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbf2abcb-e4a2-49ff-bb6b-81be89a1876a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled stanja artikala",
+      "targets": [
+        ["linkText=Pregled stanja artikala", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled stanja artikala')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/stanje_artikala/')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled stanja artikala')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f46a50bc-5597-48f5-aec2-785b86d92347",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Stanje",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d91b7e0a-71d9-43db-be20-6300208f7a4f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=th:nth-child(1)",
+      "targets": [
+        ["css=th:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Identifikator')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "604b4995-fe7b-4dbd-9acd-4cfe5b7acd45",
+    "name": "generisanje qr koda uspesno",
+    "commands": [{
+      "id": "16e66e84-687d-4d12-a24a-92feb830a438",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cfb6775-825f-42dc-9495-5a19eacfea1c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54238840-f9c5-406e-bbfc-0155a56996d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Generisanje QR koda",
+      "targets": [
+        ["linkText=Generisanje QR koda", "linkText"],
+        ["css=a:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'Generisanje QR koda')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/qr_kod/')]", "xpath:href"],
+        ["xpath=//a[7]", "xpath:position"],
+        ["xpath=//a[contains(.,'Generisanje QR koda')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62c13401-f946-4ff8-823c-8c42f8d593de",
+      "comment": "",
+      "command": "click",
+      "target": "name=sto_id",
+      "targets": [
+        ["name=sto_id", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='sto_id']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e25d47f-9139-4995-a7c2-6a5c09d46d24",
+      "comment": "",
+      "command": "select",
+      "target": "name=sto_id",
+      "targets": [],
+      "value": "label=4"
+    }, {
+      "id": "d3ffc775-8ab9-40cb-902d-d667df177246",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Generiši')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "efe9117c-4cea-4d3d-9910-9242f0238bd2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=img",
+      "targets": [
+        ["css=img", "css:finder"],
+        ["xpath=//img[@alt='QR Kod']", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "22410397-5231-447f-bcf7-66b548d46935",
+    "name": "statistika uspesno",
+    "commands": [{
+      "id": "7cf89404-7766-4f1e-a99e-55775367b371",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec54efcb-ff05-4136-b7ee-6b5fe4a9452b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6731f4e8-3439-4414-86b1-a53ef46cbef5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled statistike",
+      "targets": [
+        ["linkText=Pregled statistike", "linkText"],
+        ["css=a:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled statistike')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/statistika/')]", "xpath:href"],
+        ["xpath=//a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled statistike')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddaebfe2-1b0a-4b6f-8207-d31eee134839",
+      "comment": "",
+      "command": "click",
+      "target": "id=tip_artikla",
+      "targets": [
+        ["id=tip_artikla", "id"],
+        ["name=tip_artikla", "name"],
+        ["css=#tip_artikla", "css:finder"],
+        ["xpath=//select[@id='tip_artikla']", "xpath:attributes"],
+        ["xpath=//form[@id='statistikaForm']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2383564f-dd3b-46b6-a773-1c630a8005d0",
+      "comment": "",
+      "command": "select",
+      "target": "id=tip_artikla",
+      "targets": [],
+      "value": "label=Cappuccino"
+    }, {
+      "id": "c7ab6537-61bb-4ee7-a8e4-6a1904b09c93",
+      "comment": "",
+      "command": "click",
+      "target": "id=vremenski_interval",
+      "targets": [
+        ["id=vremenski_interval", "id"],
+        ["name=vremenski_interval", "name"],
+        ["css=#vremenski_interval", "css:finder"],
+        ["xpath=//select[@id='vremenski_interval']", "xpath:attributes"],
+        ["xpath=//form[@id='statistikaForm']/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94682c58-d456-4e29-8753-e6644dae7365",
+      "comment": "",
+      "command": "select",
+      "target": "id=vremenski_interval",
+      "targets": [],
+      "value": "label=Poslednjih 7 dana"
+    }, {
+      "id": "01326dfe-2763-4c32-9448-156b9563ae95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='statistikaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Generiši')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c53e8d64-ea2b-4cf7-a133-bb3b94d86cbe",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Rezultati statistike",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "017672ed-486c-47b9-b5f6-460c3e10f42e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=th:nth-child(1)",
+      "targets": [
+        ["css=th:nth-child(1)", "css:finder"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Artikal')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a8e35dba-301c-4544-b0e8-6f47e37ab752",
+    "name": "statistika neuspesno",
+    "commands": [{
+      "id": "43c06782-2427-45e1-801f-f758b11ea576",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8628850e-ca6d-4359-bce1-e8a7bf56b6b9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled statistike",
+      "targets": [
+        ["linkText=Pregled statistike", "linkText"],
+        ["css=a:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled statistike')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/statistika/')]", "xpath:href"],
+        ["xpath=//a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled statistike')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "747dc85a-1538-4a44-a227-707acaa000ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='statistikaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Generiši')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46eff972-cce8-462e-9c74-f3d03021afa6",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Statistika",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e56a13b7-ac34-4ed8-91fe-17d4b8ea3021",
+      "comment": "",
+      "command": "click",
+      "target": "id=tip_artikla",
+      "targets": [
+        ["id=tip_artikla", "id"],
+        ["name=tip_artikla", "name"],
+        ["css=#tip_artikla", "css:finder"],
+        ["xpath=//select[@id='tip_artikla']", "xpath:attributes"],
+        ["xpath=//form[@id='statistikaForm']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "823fbafe-ca64-41ec-8eec-30000d2d8ba8",
+      "comment": "",
+      "command": "select",
+      "target": "id=tip_artikla",
+      "targets": [],
+      "value": "label=Espresso"
+    }, {
+      "id": "1c423d95-e28c-42e0-9668-798e4b37da94",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='statistikaForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Generiši')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29819003-be96-43f1-b315-1f8ef5f9c03c",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Statistika",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1434cc4c-2951-4e37-b05b-c4e0a1a07353",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "13bf3281-7a5b-4c09-8d96-1912724ba471",
+    "name": "uspesan pregled rasporeda",
+    "commands": [{
+      "id": "1decd9cc-1342-4fdf-90d3-e5891e1f3187",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d6b0490-d711-41ef-9147-4c4043810ca5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25268592-5e3b-4238-9102-657e5ce9b3b0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled rasporeda po smenama",
+      "targets": [
+        ["linkText=Pregled rasporeda po smenama", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled rasporeda po smenama')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/raspored_po_smenama/')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled rasporeda po smenama')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90db34bd-e94a-4f42-a80f-04f6195f9435",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Raspored",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c3cba76-b24a-4b93-8cb2-4863bd3bec7d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(1) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'20.10.2025.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f19a8d1-188c-45f7-bb68-641ab8beab46",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[2]/td", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bb2bb65-86ad-4bd0-9009-3160e71f2f53",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(3) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[3]/td", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "68831bcb-08f3-448b-9d3d-5797af756fbf",
+    "name": "uspesno dodat konobar u smenu",
+    "commands": [{
+      "id": "764c6138-2455-4cbd-8644-539a45212dc4",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ea239b2-31f6-4bd2-8438-47719cf1f8f7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fae8759f-5e97-475a-88a7-9cb43852cf77",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled rasporeda po smenama",
+      "targets": [
+        ["linkText=Pregled rasporeda po smenama", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled rasporeda po smenama')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/raspored_po_smenama/')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled rasporeda po smenama')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63a1d467-1935-4c18-98d2-a852483449cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.novi-raspored",
+      "targets": [
+        ["css=.novi-raspored", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novi raspored')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08ec77ee-8a84-499e-91fc-64beb0201425",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Raspored",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c9074f0-946b-45bb-a8e2-ae86e3b2621f",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) > td:nth-child(3) .add-worker",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(3) .add-worker", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//td[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce5af691-b7d3-4800-a8df-b0d6d46bf1b2",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Dodaj konobara",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd12200b-11ea-41da-8518-a7217be12ffb",
+      "comment": "",
+      "command": "click",
+      "target": "id=worker",
+      "targets": [
+        ["id=worker", "id"],
+        ["name=worker", "name"],
+        ["css=#worker", "css:finder"],
+        ["xpath=//select[@id='worker']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b5ed8de-1559-41b7-89ee-e7574324514c",
+      "comment": "",
+      "command": "select",
+      "target": "id=worker",
+      "targets": [],
+      "value": "label=Marko Markovic"
+    }, {
+      "id": "7aefad75-6494-4d4a-a64a-b042f16acdb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0048a272-c2e9-4d81-9ec9-cb94dd0d4f37",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Raspored",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fc3e5ae6-1fc1-4868-8ebc-5007610e316d",
+    "name": "neuspesno dodat konobar u smenu",
+    "commands": [{
+      "id": "5548afc1-d243-4c50-ad64-68e3ff77659c",
+      "comment": "",
+      "command": "open",
+      "target": "/projekat/menadzer/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85a11667-f924-407e-b5e3-fbadd5988795",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1214x742",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0c34f9f-3b58-485a-96d3-4917d1e028d4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pregled rasporeda po smenama",
+      "targets": [
+        ["linkText=Pregled rasporeda po smenama", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pregled rasporeda po smenama')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/projekat/menadzer/raspored_po_smenama/')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Pregled rasporeda po smenama')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e641b5fb-1205-49e7-8ae9-5b3589dfc12c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.novi-raspored",
+      "targets": [
+        ["css=.novi-raspored", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Napravi novi raspored')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9af93979-5687-4a48-983a-53e243da7b1d",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Raspored",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd9bc705-7c73-444e-8354-996576bc3fc0",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(3) > .add-worker",
+      "targets": [
+        ["css=a:nth-child(3) > .add-worker", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//td[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0a793a1-0abc-492b-bbce-232cced00a8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sačuvaj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c82b38e-80e4-4aad-a656-1c0912d42e59",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Dodaj konobara",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c45c280e-e552-43f8-81b4-4f69c61e2624",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}
